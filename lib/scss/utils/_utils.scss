@@ -1,0 +1,17 @@
+.pad {
+  padding: $space;
+}
+
+.pad-x {
+  padding-left: $space;
+  padding-right: $space;
+}
+
+.pad-y {
+  padding-top: $space;
+  padding-bottom: $space;
+}
+
+@mixin pad-scale($scale) {
+  padding: $space * $scale;
+}

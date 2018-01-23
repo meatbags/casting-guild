@@ -1,0 +1,14 @@
+// font
+
+$fontStack: 'Work Sans', sans-serif;
+
+// font size
+
+$fontSize: 14px;
+$fontSmall: 12px;
+
+// helpers
+
+.text-small {
+  font-size: $fontSmall;
+}

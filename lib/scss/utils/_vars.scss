@@ -1,0 +1,20 @@
+// colour
+
+$colourPrimary: #105963;
+$colourSecondary: #92d1e3;
+$colourMedium: #2da9cf;
+$black: #000;
+$white: #fff;
+$gradient: linear-gradient(to right, $colourPrimary, $colourSecondary);
+$gradientWhite: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,0));
+
+// sizing
+
+$space: 10px;
+$width: 960px;
+$sizeNav: 120px;
+$sizeFooter: 240px;
+
+// animation
+
+$transition: 0.5s;
