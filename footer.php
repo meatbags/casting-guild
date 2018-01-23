@@ -10,7 +10,9 @@
 		<div class='footer-box'>
 			<div class='footer-box__half'>
 				<div class='footer-logo'>
-					<img src='<?php echo $dir . '/lib/img/cga-logo-white.png' ;?>' alt='CGA Logo White' />
+					<a href='<?php echo get_site_url(); ?>'>
+						<img src='<?php echo $dir . '/lib/img/cga-logo-white.png' ;?>' alt='CGA Logo White' />
+					</a>
 				</div>
 			</div>
 			<div class='footer-divider'>
@@ -34,7 +36,7 @@
 		</div>
 	</div>
 	<div class='footer__copyright text-small'>
-		&copy; The Casting Guild of Australia <?php echo date("Y"); ?>
+		&copy; CGA <?php echo date("Y"); ?>
 	</div>
 </div>
 

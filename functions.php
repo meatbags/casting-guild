@@ -9,12 +9,13 @@ function custom_setup()
 add_action('after_setup_theme', 'custom_setup');
 
 function remove_admin_post_types() {
-  //remove_menu_page('edit.php');
-  //remove_menu_page('edit-comments.php');
+  remove_menu_page('edit.php');
+  remove_menu_page('edit-comments.php');
 }
 add_action('admin_menu', 'remove_admin_post_types');
 
 function add_admin_post_types() {
+	/*
 	register_post_type('index', array(
 		'label' => 'Index',
 		'public' => true,
@@ -37,6 +38,7 @@ function add_admin_post_types() {
 		'taxonomies' => array('category', 'post_tag'),
 		'supports' => array('title', 'editor', 'revisions', 'thumbnail')
 	));
+	*/
 }
 add_action('init', 'add_admin_post_types');
 

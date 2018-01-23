@@ -4,11 +4,33 @@ $fontStack: 'Work Sans', sans-serif;
 
 // font size
 
-$fontSize: 14px;
+$fontSize: 16px;
 $fontSmall: 12px;
 
 // helpers
 
 .text-small {
   font-size: $fontSmall;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalise {
+  text-transform: capitalize;
+}
+
+h1 {
+  display: inline-block;
+  position: relative;
+
+  .underline {
+    //position: absolute;
+    height: $space / 2;
+    width: 100%;
+    background: $colourSecondary;
+    z-index: -1;
+    margin-top: $space / 2;
+  }
 }
