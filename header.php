@@ -24,7 +24,7 @@
 	</script>
 </head>
 
-<body class="<?php echo get_body_class(''); ?>">
+<body>
 
 <div class="content">
 	<div class="wrapper">

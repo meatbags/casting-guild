@@ -1,9 +1,10 @@
 // colour
 
-$colourPrimary: #105963;
-$colourSecondary: #92d1e3;
+$colourPrimary: #105973;
+$colourSecondary: #92d1f3;
 $colourMedium: #2da9cf;
 $black: #000;
+$grey: #aaa;
 $white: #fff;
 $gradient: linear-gradient(to right, $colourPrimary, $colourSecondary);
 $gradientWhite: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,0));
@@ -18,3 +19,8 @@ $sizeFooter: 240px;
 // animation
 
 $transition: 0.5s;
+
+// indices
+
+$indexCanvas: 5;
+$indexNavInner: 10;

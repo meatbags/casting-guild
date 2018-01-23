@@ -44,11 +44,22 @@
           width: 160px;
 
           .footer-links__item {
+            @include pad-scale(0.5);
+
             width: 50%;
             height: 50%;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: flex-end;
+
+            &:nth-child(2n) {
+              justify-content: flex-start;
+            }
+
+            img {
+              height: 100%;
+              width: auto;
+            }
           }
         }
 
