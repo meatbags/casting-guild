@@ -1,11 +1,13 @@
-// font
+// defaults
 
-$fontStack: 'Work Sans', sans-serif;
+$fontStack: 'PLayfair Display', sans-serif;
+$letterSpacing: 2px;
+$lineHeight: 1.4;
 
 // font size
 
-$fontSize: 16px;
-$fontSmall: 12px;
+$fontSize: 18px;
+$fontSmall: 14px;
 
 // helpers
 
@@ -19,18 +21,4 @@ $fontSmall: 12px;
 
 .capitalise {
   text-transform: capitalize;
-}
-
-h1 {
-  display: inline-block;
-  position: relative;
-
-  .underline {
-    //position: absolute;
-    height: $space / 2;
-    width: 100%;
-    background: $colourSecondary;
-    z-index: -1;
-    margin-top: $space / 2;
-  }
 }

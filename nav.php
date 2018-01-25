@@ -1,16 +1,19 @@
 <?php
   $title = get_the_title();
   $query = new WP_Query(array('post_type' => 'page', 'orderby' => 'menu_order'));
+  $dir = get_template_directory_uri() . '/lib/img/';
 ?>
 
 <div class='nav'>
   <div class='nav__inner'>
     <div class='nav__inner__header'>
-      <div class='nav-logo'>
-        <a href='<?php echo get_site_url(); ?>'>
-          <img src='<?php echo get_template_directory_uri() . '/lib/img/cga-logo.png' ; ?>' alt='CGA Logo'/>
-        </a>
-      </div>
+      <a href='<?php echo get_site_url(); ?>'>
+        <div class='nav-logo'>
+          <img src='<?php echo $dir; ?>a.svg' />
+          <img src='<?php echo $dir; ?>g.svg' />
+          <img src='<?php echo $dir; ?>c.svg' />
+        </div>
+      </a>
     </div>
     <div class='nav__inner__body'>
       <?php
@@ -19,17 +22,12 @@
             $query->the_post();
             $label = get_the_title();
           ?>
-            <div class='nav-item uppercase <?php if ($title == $label){ echo 'active'; } ?>'>
-              <div class='nav-item__popup'>
-                <div class='nav-item__popup__inner'></div>
-              </div>
-              <div class='nav-item__link'>
-                <a href='<?php echo get_the_permalink();?>'>
-                  <span class='active-show'>{&nbsp;</span>
+            <div class='nav-item <?php if ($title == $label){ echo 'active'; } ?>'>
+              <a href='<?php echo get_the_permalink();?>'>
+                <div class='nav-item__link '>
                   <?php echo $label; ?>
-                  <span class='active-show'>&nbsp;}</span>
-                </a>
-              </div>
+                </div>
+              </a>
             </div>
           <?php
           endwhile;

@@ -5,17 +5,19 @@
 ?>
 
 <div class='page ajax-target'>
-	<div class='page__inner'>
-		<h1 class='capitalise'>
+	<div class='page__title'>
+		<h1 class='page__title__inner capitalise'>
 			<?php echo $title; ?>
-			<div class='underline'>
-				<div class='underline__inner'></div>
-			</div>
 		</h1>
+	</div>
+	<div class='page__inner'>
 		<?php
 			if (have_posts()):
 				while (have_posts()):
 					the_post();
+					if (is_home()): ?>
+						<div>HOME</div>
+					<?php endif;
 					the_content();
 					endwhile;
 	 		endif;

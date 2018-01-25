@@ -1,18 +1,19 @@
 // colour
 
 $colourPrimary: #105973;
-$colourSecondary: #92d1f3;
+$colourSecondary: #d1f392; //#92d1f3;
 $colourMedium: #2da9cf;
 $black: #000;
 $grey: #aaa;
 $white: #fff;
 $gradient: linear-gradient(to right, $colourPrimary, $colourSecondary);
+$gradientReversed: linear-gradient(to left, $colourPrimary, $colourSecondary);
 $gradientWhite: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,0));
 
 // sizing
 
 $space: 10px;
-$width: 960px;
+$width: 1080px;
 $sizeNav: 120px;
 $sizeFooter: 240px;
 
