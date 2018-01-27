@@ -22,10 +22,13 @@
 			var isHome = '<?php echo is_home(); ?>';
 		/* ]]> */
 	</script>
+
+	<noscript>
+    <style></style>
+  </noscript>
 </head>
 
 <body>
 
 <div class="content">
 	<div class="wrapper">
-		<?php get_template_part('nav'); ?>

@@ -1,0 +1,55 @@
+
+.inner {
+  width: $width;
+
+  @media screen and (max-width: $width) {
+    width: 100%;
+  }
+}
+
+.section {
+  width: 100%;
+
+  .section__header {
+    @extend .noselect;
+
+    width: 100%;
+    height: 22.5vh;
+    background: $colourPrimary;
+    display: flex;
+    justify-content: center;
+    color: $white;
+    cursor: pointer;
+
+    .section__header__inner {
+      @extend .inner;
+
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: $space * 2;
+
+      h1 {
+        width: 100%;
+        text-align: right;
+        margin: 0;
+        padding: 0;
+        font-size: $fontLarge;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .section__body {
+    width: 100%;
+    transition: $transition;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    height: 0;
+
+    .section__body__inner {
+      @extend .inner;
+
+    }
+  }
+}
