@@ -14,19 +14,19 @@ $gradientWhite: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1), rgba(2
 // sizing
 
 $space: 10px;
-$width: 1080px;
+$width: 1000px;
 $sizeNav: 120px;
-$sizeFooter: 240px;
+$sizeFooter: 75vh;
+$offset: $space * 2;
 
 // animation
 
-$transition: 0.5s;
+$transition: 0.75s;
 $transitionFast: 0.25s;
 
 // indices
 
-$indexCanvas: 5;
-$indexNavInner: 10;
+$indexSection: 10;
 
 // borders
 

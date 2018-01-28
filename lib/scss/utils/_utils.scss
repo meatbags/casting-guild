@@ -16,6 +16,16 @@
   padding: $space * $scale;
 }
 
+@mixin pad-x($scale) {
+  padding-left: $space * $scale;
+  padding-right: $space * $scale;
+}
+
+@mixin pad-y($scale) {
+  padding-top: $space * $scale;
+  padding-bottom: $space * $scale;
+}
+
 .noselect {
   user-select: none;
 }

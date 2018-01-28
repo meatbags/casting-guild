@@ -23,8 +23,17 @@
 		/* ]]> */
 	</script>
 
+	<!-- case noscript, open all interactive tabs, rm scripted elements -->
 	<noscript>
-    <style></style>
+    <style>
+			.section__body {
+				height: auto;
+			}
+
+			.noscript-hide {
+				display: none;
+			}
+		</style>
   </noscript>
 </head>
 

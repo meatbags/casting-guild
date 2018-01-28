@@ -34,9 +34,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class='footer__copyright text-small'>
-		&copy; CGA <?php echo date("Y"); ?>
+		<div class='footer__copyright'>
+			&copy; CGA <?php echo date("Y"); ?>
+		</div>
 	</div>
 </div>
 
