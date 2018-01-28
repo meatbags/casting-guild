@@ -11,7 +11,7 @@
       <h1 class='title hidden'><?php echo $title; ?>&nbsp;.</h1>
       <div class='section__header__prompt'>
         <div class='section__header__prompt__inner'>
-          &#9660;
+          <!--&#9660;-->&nbsp;
         </div>
       </div>
     </div>
