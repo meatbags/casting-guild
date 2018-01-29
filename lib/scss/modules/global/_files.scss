@@ -9,6 +9,8 @@
     .file__inner {
       @extend .button__inner;
       width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
     }
   }
 }

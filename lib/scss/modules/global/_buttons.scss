@@ -9,6 +9,12 @@
   .button {
     width: 48%;
   }
+
+  @media screen and (max-width: $mobile) {
+    .button {
+      width: 100%;
+    }
+  }
 }
 
 .button {
@@ -35,7 +41,9 @@
 
   @media screen and (max-width: $width) {
     .button__inner {
-      padding: $space;
+      padding: $space * 1.5;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 

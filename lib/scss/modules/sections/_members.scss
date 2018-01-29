@@ -38,6 +38,12 @@
       padding: $space / 2;
     }
 
+    @media screen and (max-width: $mobile) {
+      #filter-name {
+        width: 75%;
+      }
+    }
+
     .search-by-name__submit {
       display: flex;
       padding-top: $space;
@@ -104,10 +110,6 @@
       position: relative;
       overflow: hidden;
 
-      @media screen and (max-width: $width) {
-        text-align: center;
-      }
-
       &.hidden {
         //opacity: 0;
       }
@@ -172,6 +174,32 @@
         position: absolute;
         top: 0;
         right: 0;
+      }
+    }
+
+    @media screen and (max-width: $width) {
+      .member {
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width: $mobile) {
+      width: 100%;
+
+      .member {
+        text-align: right;
+
+        .member__body {
+          .member__body__inner {
+            padding-top: $space / 2;
+            padding-bottom: $space;
+            font-size: $fontSmallMobile !important;
+          }
+        }
+      }
+
+      &:nth-child(2), &:nth-child(3) {
+        display: none;
       }
     }
   }
