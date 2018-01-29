@@ -11,6 +11,19 @@ body, html {
   color: $black;
   letter-spacing: $letterSpacing;
   line-height: $lineHeight;
+  overflow-x: hidden;
+
+  @media screen and (max-width: $width) {
+    font-size: $fontSizeTablet;
+    letter-spacing: $letterSpacingTablet;
+    line-height: $lineHeightTablet;
+  }
+
+  @media screen and (max-width: $mobile) {
+    font-size: $fontSizeMobile;
+    letter-spacing: $letterSpacingMobile;
+    line-height: $lineHeightMobile;
+  }
 }
 
 a {

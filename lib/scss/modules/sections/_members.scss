@@ -10,6 +10,10 @@
   width: 66.66%;
   border-bottom: $border;
 
+  @media screen and (max-width: $width) {
+    width: 100%;
+  }
+
   .members-search__title {
     width: 100%;
     text-align: right;
@@ -100,8 +104,12 @@
       position: relative;
       overflow: hidden;
 
+      @media screen and (max-width: $width) {
+        text-align: center;
+      }
+
       &.hidden {
-        opacity: 0;
+        //opacity: 0;
       }
 
       &.active, &:hover {

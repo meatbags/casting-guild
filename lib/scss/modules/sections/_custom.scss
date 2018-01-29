@@ -38,7 +38,14 @@
 
 #contact {
   .section__body {
+    .section-emails {
+      transition: $transition;
+      transform: translateX(-$offset);
+    }
     &.active {
+      .section-emails {
+        transform: translateX(0);
+      }
     }
   }
 }

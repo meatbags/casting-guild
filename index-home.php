@@ -4,9 +4,9 @@
 ?>
 
 <div class='grid'>
-  <div class='grid-third'>
+  <div class='grid-third mobile-hide'>
   </div>
-  <div class='grid-twothirds section-content'>
+  <div class='grid-twothirds section-content section-home mobile-main'>
     <div class='logo'>
       <div class='logo__image'>
         <img src='<?php echo $dir; ?>/lib/img/a.svg' />
@@ -16,9 +16,13 @@
     </div>
     <?php echo $content; ?>
     <br />
-    <div class='grid'>
-      <div class='grid-half'>To members.</div>
-      <div class='grid-half'>Join.</div>
+    <div class='button-list'>
+      <div class='button'>
+        <div id='button-members' class='button__inner'>Members.</div>
+      </div>
+      <div class='button'>
+        <div id='button-join' class='button__inner'>Join.</div>
+      </div>
     </div>
   </div>
 </div>

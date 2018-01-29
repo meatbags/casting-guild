@@ -12,17 +12,18 @@
   .section__header {
     background-color: $colour;
 
-    &:hover {
-      h1 {
-       //opacity: 0.5;
-      }
-    }
-
     .section__header__inner {
       .section__header__prompt {
         .section__header__prompt__inner {
-          color: $white;
-          background: lighten($colour, 10%);
+          color: $colour;
+          background: $white;
+        }
+      }
+
+      .section__header__prompt-inverse {
+        .section__header__prompt-inverse__inner {
+          color: $colour;
+          background: $white;
         }
       }
     }
@@ -57,14 +58,30 @@
         text-align: right;
         margin: 0;
         padding: 0;
-        font-size: $fontLarge;
         font-weight: normal;
         transition: $transition;
+        font-size: $fontLarge;
 
         &.hidden {
           color: yellow;
-          opacity: 0;
-          transform: translateX($offset * 2);
+          transform: translateX(100vw);
+        }
+      }
+
+      @media screen and (max-width: $width) {
+        padding-bottom: $space * 2;
+
+        h1 {
+          font-size: $fontLargeTablet;
+          padding: $space * 2;
+        }
+      }
+
+      @media screen and (max-width: $mobile) {
+        padding-bottom: $space;
+
+        h1 {
+          font-size: $fontLargeMobile;
         }
       }
 
@@ -80,7 +97,30 @@
 
         .section__header__prompt__inner {
           @include pad-x(1);
-          @include pad-y(0.5);
+          @include pad-y(1);
+
+          border-top-left-radius: $space * 2;
+          border-top-right-radius: $space * 2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: $fontSmall;
+        }
+      }
+
+      .section__header__prompt-inverse {
+        position: absolute;
+        left: 100%;
+        bottom: 0;
+        margin-left: $space * 4;
+        height: 0;
+        overflow: hidden;
+        transition: $transition;
+        pointer-events: none;
+
+        .section__header__prompt-inverse__inner {
+          @include pad-x(1);
+          @include pad-y(1);
 
           border-top-left-radius: $space * 2;
           border-top-right-radius: $space * 2;
@@ -118,9 +158,22 @@
         transition: $transition;
       }
 
+      strong, h4 {
+        width: 100%;
+        text-align: right;
+      }
+
       p {
         text-align: justify;
         margin-bottom: $space * 2;
+
+        @media screen and (max-width: $width) {
+          text-align: justify;
+        }
+
+        @media screen and (max-width: $mobile) {
+          text-align: left;
+        }
       }
     }
   }

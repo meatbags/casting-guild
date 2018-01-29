@@ -11,10 +11,12 @@ add_action('after_setup_theme', 'custom_setup');
 function remove_admin_post_types() {
   remove_menu_page('edit.php');
   remove_menu_page('edit-comments.php');
+	update_option( 'link_manager_enabled', 0 );
 }
 add_action('admin_menu', 'remove_admin_post_types');
 
 function add_admin_post_types() {
+
 	/*
 	register_post_type('index', array(
 		'label' => 'Index',

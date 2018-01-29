@@ -14,6 +14,11 @@
           &nbsp;&#9660;&nbsp;
         </div>
       </div>
+      <div class='section__header__prompt-inverse'>
+        <div class='section__header__prompt-inverse__inner'>
+          &nbsp;&#9650;&nbsp;
+        </div>
+      </div>
     </div>
   </div>
 

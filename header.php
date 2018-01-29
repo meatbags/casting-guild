@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- by xavierburrow.com -->
+<!-- site by xavierburrow.com -->
 
 <html lang="en">
 <head>
@@ -17,7 +17,7 @@
 	<script>
 		/* <![CDATA[ */
 			var themePath = '<?php echo get_template_directory_uri(); ?>';
-			var ajaxUrl = '<?php echo admin_url('admin-ajax.php'); ?>';
+			var ajaxUrl = '<?php //echo admin_url('admin-ajax.php'); ?>';
 			var pageTitle = '<?php echo get_the_title(); ?>';
 			var isHome = '<?php echo is_home(); ?>';
 		/* ]]> */
@@ -29,15 +29,15 @@
 			.section__body {
 				height: auto;
 			}
-
 			.noscript-hide {
 				display: none;
 			}
 		</style>
   </noscript>
 </head>
-
 <body>
+
+<?php get_template_part('loading'); ?>
 
 <div class="content">
 	<div class="wrapper">

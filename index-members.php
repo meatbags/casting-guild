@@ -10,7 +10,7 @@
 ?>
 
 <div class='grid'>
-  <div class='grid-full section-content section-members'>
+  <div class='grid-full section-content section-members mobile-main'>
     <div class='members-search'>
       <?php echo $content; ?>
       <div class='search-by-name'>

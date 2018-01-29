@@ -3,8 +3,13 @@
 ?>
 
 <div class='grid'>
-  <div class='grid-third'></div>
-  <div class='grid-twothirds section-content'>
-    <?php echo $content; ?>
+  <div class='grid-third mobile-hide'></div>
+  <div class='grid-twothirds section-content section-join mobile-main'>
+    <br />
+    <?php
+      echo $content;
+      get_template_part('list-files');
+      get_template_part('list-links');
+    ?>
   </div>
 </div>
