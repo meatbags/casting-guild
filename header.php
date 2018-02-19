@@ -37,6 +37,8 @@
 </head>
 <body>
 
+<?php get_template_part('nav'); ?>
+<?php get_template_part('menu'); ?>
 <?php get_template_part('loading'); ?>
 
 <div class="content">

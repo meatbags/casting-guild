@@ -14,7 +14,7 @@ $gradientWhite: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1), rgba(2
 // sizing
 
 $space: 10px;
-$sizeNav: 120px;
+$sizeNav: 80px;
 $sizeFooter: 20vh;
 $offset: $space * 2;
 
@@ -29,12 +29,14 @@ $mobile: 500px;
 $transition: 0.6s;
 $transitionMedium: 0.3s;
 $transitionFast: 0.2s;
+$transitionSlow: 1.0s;
 
-// indices
+// indices, canvas = 10
 
-$indexSection: 10;
-$indexHomeButton: 100;
-$indexLoading: 200;
+$indexSection: 5;
+$indexLoading: 15;
+$indexMenu: 20;
+$indexNav: 30;
 
 // borders
 

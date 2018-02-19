@@ -1,30 +1,32 @@
-@keyframes throb {
-  0% { opacity: 0.5; transform: scale(1.0); }
-  50% { opacity: 1; transform: scale(0.9); }
-  100% { opacity: 0.5; transform: scale(1.0); }
-}
-
 .loading {
   position: fixed;
   width: 100vw;
   height: 100%;
-  background: $white;
   top: 0;
   left: 0;
   z-index: $indexLoading;
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 
-  .loading__image {
-    width: 120px;
-    animation-name: throb;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
+  .loading__background {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
-    img {
+    .loading__background__tab {
+      background: $white;
+      transition: $transitionSlow;
       width: 100%;
-      height: auto;
+      height: 100%;
+
+      &.active {
+        transform: translateX(-100vw);
+        opacity: 0;
+      }
     }
   }
 }

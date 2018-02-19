@@ -1,0 +1,33 @@
+.nav {
+  @extend .noselect;
+  @include pad-xy(2, 1);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $white;
+  z-index: $indexNav;
+
+  .nav__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .nav__title {
+      height: 100%;
+    }
+
+    .nav__menu {
+      height: 100%;
+      cursor: pointer;
+      padding-left: $space * 2;
+
+      img {
+        height: 16px;
+        width: auto;
+        cursor: pointer;
+      }
+    }
+  }
+}
