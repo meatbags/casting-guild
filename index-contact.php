@@ -4,7 +4,7 @@
   $socmed = get_field('social_media');
 ?>
 
-<div class='grid grid-contact'>
+<div class='section-contact'>
   <div class='grid-40 section-emails'>
     <?php
     if ($emails):

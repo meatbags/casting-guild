@@ -18,13 +18,14 @@
     justify-content: space-around;
 
     .loading__background__tab {
-      background: $white;
+      background: $whiteBlue;
       transition: $transitionSlow;
       width: 100%;
       height: 100%;
       margin: 0;
       padding: 0;
       flex: 1;
+      border-right: $space solid $deepBlue;
 
       &.active {
         transform: translateX(-100vw);

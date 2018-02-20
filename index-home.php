@@ -12,7 +12,7 @@
       </div>
       <div class='est'>EST. 2013</div>
     </div>
-    <div class='parallax down-bar'>
+    <div class='parallax down-bar scroll-down'>
       <div class='down-bar__inner'>&darr;</div>
     </div>
   </div>

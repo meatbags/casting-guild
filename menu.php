@@ -1,9 +1,9 @@
 <div class='menu'>
   <div class='menu__inner'>
-    <div class='menu-item' data-target=''>home.</div>
-    <div class='menu-item'>members.</div>
-    <div class='menu-item'>join the guild.</div>
-    <div class='menu-item'>resources.</div>
-    <div class='menu-item'>contact.</div>
+    <div class='menu-item' data-target='.section-home'>home.</div>
+    <div class='menu-item' data-target='.section-members'>members.</div>
+    <div class='menu-item' data-target='.section-join'>join the guild.</div>
+    <div class='menu-item' data-target='.section-resources'>resources.</div>
+    <div class='menu-item' data-target='.section-contact'>info.</div>
   </div>
 </div>

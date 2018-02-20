@@ -1,6 +1,6 @@
 .nav {
   @extend .noselect;
-  @include pad-xy(2, 1.5);
+  @include pad-xy(0.5, 0.5);
 
   position: fixed;
   top: 0;
@@ -18,9 +18,10 @@
     }
 
     .nav__menu {
+      @include pad-xy(1.5, 1.0);
+
       height: 100%;
       cursor: pointer;
-      padding-left: $space * 2;
 
       img {
         height: 16px;
