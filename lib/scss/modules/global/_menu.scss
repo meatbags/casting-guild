@@ -13,6 +13,9 @@
   justify-content: center;
   align-items: center;
   z-index: $indexMenu;
+  font-family: $fontSerif;
+  color: $deepBlue;
+  font-weight: bold;
 
   &.active {
     opacity: 1;
@@ -24,7 +27,7 @@
     flex-direction: column;
 
     .menu-item {
-      transition: $transitionSlow;
+      transition: transform $transitionSlow, opacity $transitionSlow;
       transform: translateX(-100px);
       opacity: 0;
       padding: $space;

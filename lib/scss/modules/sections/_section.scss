@@ -1,5 +1,9 @@
 .section {
   width: 100%;
+
+  &:nth-child(1) {
+    background: $deepBlue;
+  }
 }
 
 .section-inner {

@@ -1,12 +1,11 @@
 .nav {
   @extend .noselect;
-  @include pad-xy(2, 1);
+  @include pad-xy(2, 1.5);
 
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: $white;
   z-index: $indexNav;
 
   .nav__inner {

@@ -4,5 +4,14 @@
 ?>
 
 <div class='section-home'>
-  //?
+  <div class='section-home__inner'>
+    <div class='title-box'>
+      <div class='title'>The Casting Guild of Australia.</div>
+      <div class='parallax double-line'>
+        <div class='line'></div>
+      </div>
+      <div class='est'>est. 2013</div>
+    </div>
+    <div class='parallax down-bar'></div>
+  </div>
 </div>
