@@ -10,8 +10,10 @@
       <div class='parallax double-line'>
         <div class='line'></div>
       </div>
-      <div class='est'>est. 2013</div>
+      <div class='est'>EST. 2013</div>
     </div>
-    <div class='parallax down-bar'></div>
+    <div class='parallax down-bar'>
+      <div class='down-bar__inner'>&darr;</div>
+    </div>
   </div>
 </div>
