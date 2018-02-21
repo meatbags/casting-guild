@@ -2,14 +2,21 @@
   $content = apply_filters('the_content', get_the_content());
 ?>
 
-
-<div class='grid'>
-  <div class='grid-third mobile-hide'></div>
-  <div class='grid-twothirds section-content section-resources mobile-main'>
-    <?php
-      echo $content;
-      get_template_part('list-files');
-      get_template_part('list-links');
-    ?>
+<div class='section'>
+  <div class='section-resources'>
+    <div class='section-resources__inner'>
+      <h1 class='title parallax'>CGA Resources.</h1>
+      <div class='parallax parallax-line'>
+        <div class='line'></div>
+      </div>
+      <div class='parallax p'>
+        <?php echo $content; ?>
+      </div>
+      <?php get_template_part('list-files'); ?>
+      <br /><br />
+    </div>
+    <div class='parallax parallax-next'>
+      <div class='parallax-next__inner'>&darr;</div>
+    </div>
   </div>
 </div>

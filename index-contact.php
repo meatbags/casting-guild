@@ -2,46 +2,75 @@
   $content = apply_filters('the_content', get_the_content());
   $emails = get_field('emails');
   $socmed = get_field('social_media');
+  $links = get_field('link_list');
 ?>
 
-<div class='section-contact'>
-  <div class='grid-40 section-emails'>
-    <?php
-    if ($emails):
-      foreach ($emails as $email):
-        $label = $email['label'];
-        $url = $email['email'];
-        ?>
-      <div class='email'>
-        <div class='email-label'><?php echo $label; ?></div>
-        <div class='email-email'>
-          <a href='mailto:<?php echo $url; ?>'><?php echo $url; ?></a>
-        </div>
+<div class='section'>
+  <div class='section-contact'>
+    <div class='section-contact__inner'>
+      <h1 class='title parallax'>Contact.</h1>
+      <div class='parallax parallax-line'>
+        <div class='line'></div>
       </div>
-    <?php
-      endforeach;
-    endif;
-  ?>
-
-  <?php if ($socmed): ?>
-    <div class='social-media'>
-      <div class='social-media__title'>Connect</div>
-      <?php
-        foreach ($socmed as $soc):
-          $label = $soc['label'];
-          $url = $soc['url'];
+      <div class='section-emails'>
+        <?php
+        if ($emails):
+          foreach ($emails as $email):
+            $label = $email['label'];
+            $url = $email['email'];
+            ?>
+          <br />
+          <div class='email'>
+            <div class='email-label'><?php echo $label; ?>.</div>
+            <div class='email-email'>
+              <a href='mailto:<?php echo $url; ?>'><?php echo $url; ?></a>
+            </div>
+          </div>
+        <?php
+          endforeach;
+        endif;
       ?>
-      <div class='social-media__link'>
-        <a href='<?php echo $url; ?>'>
-          <?php echo $label; ?>
-        </a>
+
+      <?php if ($socmed): ?>
+        <br />
+        <div class='social-media'>
+          <div class='social-media__title'>Connect.</div>
+          <?php
+            foreach ($socmed as $soc):
+              $label = $soc['label'];
+              $url = $soc['url'];
+          ?>
+          <div class='social-media__link'>
+            <a href='<?php echo $url; ?>'>
+              <?php echo $label; ?>
+            </a>
+          </div>
+        <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
+
+      <?php if ($links): ?>
+        <br />
+        <div class='social-media'>
+          <div class='social-media__title'>Our friends.</div>
+            <?php foreach($links as $link):
+              $label= $link['name'];
+              $url = $link['url'];
+              //$img = $link['logo']['sizes']['thumbnail'];
+              ?>
+              <div class='social-media__link'>
+                <a href='<?php echo $url; ?>'>
+                  <?php echo $label; ?>
+                </a>
+              </div>
+            <?php endforeach; ?>
+          </div>
+      <?php endif; ?>
       </div>
-    <?php endforeach; ?>
+      <div class='section-form'>
+        <?php //echo $content; ?>
+        <br /><br />
+      </div>
     </div>
-  <?php endif; ?>
-  </div>
-  <div class='grid-60 section-content section-contact'>
-    <?php echo $content; ?>
-    <br /><br />
   </div>
 </div>

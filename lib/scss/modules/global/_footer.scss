@@ -4,17 +4,16 @@
   display: flex;
   justify-content: center;
   color: $white;
-  background-color: lighten($colourPrimary, 50%);
+  background-color: $deepBlue;
   position: relative;
+  font-family: $fontSerif;
 
   .footer__inner {
+    @include pad-y(4);
     width: $width;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding-bottom: $space * 4;
-    
+
     @media screen and (max-width: $width) {
       width: 100%;
     }
@@ -22,6 +21,12 @@
     .footer__copyright {
       font-size: $fontLarge;
       pointer-events: none;
+      width: 100%;
+      text-align: right;
+
+      @media screen and (max-width: $tablet) {
+        text-align: center;
+      }
 
       @media screen and (max-width: $width) {
         font-size: $fontLargeTablet;
@@ -30,6 +35,20 @@
 
       @media screen and (max-width: $mobile) {
         font-size: $fontLargeMobile;
+      }
+    }
+
+    .footer__credit {
+      width: 100%;
+      text-align: right;
+
+      @media screen and (max-width: $tablet) {
+        text-align: center;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: underline;
       }
     }
   }

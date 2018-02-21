@@ -1,0 +1,111 @@
+.section-contact {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .section-contact__inner {
+    @extend .section-inner;
+    text-align: right;
+    font-size: $fontMedium;
+    font-family: $fontSerif;
+    color: black;
+
+    @media screen and (max-width: $tablet) {
+      text-align: center;
+    }
+
+    .title {
+      width: 100%;
+      font-size: $fontLarge;
+      transition: $transitionSlow;
+      margin: 0;
+      padding: 0;
+      padding-top: $space * 2;
+      color: $blackBlue;
+
+      @media screen and (max-width: $mobile) {
+        padding-left: $space;
+        text-align: left;
+      }
+    }
+
+    a {
+      &:hover {
+        color: $deepBlue;
+      }
+    }
+
+    @media screen and (max-width: $mobile) {
+      .section-emails {
+        width: 100%;
+        text-align: left;
+        padding-left: $space;
+      }
+    }
+
+    .parallax-line {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      @include pad-y(2);
+
+      @media screen and (max-width: $mobile) {
+        justify-content: flex-start;
+      }
+
+      .line {
+        background-image: linear-gradient(to right, $black 50%, rgba(255,255,255,0) 0%);
+        background-position: bottom;
+        background-size: $space * 2 $space;
+        background-repeat: repeat-x;
+        width: 0;
+        height: 3px;
+        transition: $transitionSlow;
+      }
+
+      &.active {
+        .line {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.wpcf7 {
+  padding-top: $space * 2 !important;
+  padding-bottom: $space * 2 !important;
+  width: 100%;
+  font-size: $fontSmall;
+  font-weight: 200;
+  text-align: left;
+
+  label {
+    width: 100%;
+
+    .your-name, .your-email, .your-subject, .your-message {
+      width: 100%;
+
+      input, textarea {
+        width: 100%;
+        font-family: $fontStack;
+        border: 1px solid #888;
+        border-radius: 0;
+        @include pad-y(0.5);
+        @include pad-x(0.5);
+      }
+    }
+  }
+
+  input[type=submit] {
+    @include pad-y(1);
+    width: 50%;
+    font-family: $fontStack;
+    background: none;
+    border: 1px solid #888;
+    border-radius: 0;
+  }
+}

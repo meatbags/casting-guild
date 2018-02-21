@@ -10,6 +10,9 @@
 		<div class='footer__copyright'>
 			&copy; CGA <?php echo date("Y"); ?>&nbsp;.
 		</div>
+		<div class='footer__credit'>
+			<a target='_blank' href='http://xavierburrow.com'>Website by XB.</a>
+		</div>
 	</div>
 </div>
 

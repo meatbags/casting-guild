@@ -1,5 +1,5 @@
 .button-list {
-  @include pad-y(1);
+  @include pad-xy(2, 1);
 
   width: 100%;
   display: flex;
@@ -19,24 +19,21 @@
 
 .button {
   display: flex;
-  background: $colourPrimary;
   cursor: pointer;
-  color: $white;
-  transition: $transitionFast;
+  color: $blackBlue;
   border: 0 solid $colourSecondary;
   border-right: $space solid $colourSecondary;
   margin-bottom: $space;
+  border: 3px dashed $blackBlue;
+  font-size: $fontMedium;
+  font-family: $fontStack;
 
   .button__inner {
     display: flex;
     justify-content: center;
     height: 100%;
     width: 100%;
-    color: $white;
     padding: $space * 2;
-    transition: $transitionFast;
-    border-right: $space solid $colourMedium;
-    border-left: 0 solid $colourMedium;
   }
 
   @media screen and (max-width: $width) {
@@ -47,12 +44,15 @@
     }
   }
 
+  @media screen and (max-width: $mobile) {
+      font-size: $fontSmall;
+  }
+
   &:hover {
-    background: $colourSecondary;
-    border-right: $space solid $colourPrimary;
+    border: 3px dashed $lightBlue;
+    color: $lightBlue;
 
     .button__inner {
-
     }
   }
 

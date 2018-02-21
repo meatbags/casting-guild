@@ -1,5 +1,5 @@
 .file-list {
-  @include pad-y(3);
+  @include pad-xy(2, 3);
   width: 100%;
 
   .file {

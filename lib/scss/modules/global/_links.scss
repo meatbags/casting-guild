@@ -4,44 +4,32 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  font-size: $fontMedium;
 
   .link {
-    width: 50%;
-    margin-bottom: $space;
+    width: 33.33%;
 
     .link__inner {
       width: 100%;
       height: 100%;
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      padding: $space;
+      padding: $space / 2;
 
       .link-name {
-        width: 75%;
+        display: flex;
+        font-size: $fontMedium;
       }
 
       .link-img {
-        width: 25%;
-
-        img {
-          border-radius: $space;
-        }
+        display: none;
       }
 
       a {
         color: inherit;
         flex: 1;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        transition: $transitionFast;
 
         &:hover {
-          opacity: 0.5;
-          transform: scale(0.96);
+          color: $lightBlue;
         }
       }
     }
@@ -50,9 +38,5 @@
   @media screen and (max-width: $mobile) {
     padding-bottom: $space;
     padding-top: $space;
-
-    .link {
-      width: 100%;
-    }
   }
 }

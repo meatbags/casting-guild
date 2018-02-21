@@ -1,0 +1,136 @@
+$bubbleSize: 100px;
+$bulletSize: 30px;
+
+.section-join {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background: $whiteBlue;
+  color: $blackBlue;
+
+  .section-join__inner {
+    @extend .section-inner;
+    z-index: $indexSection;
+    font-family: $fontSerif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+      width: 100%;
+      text-align: center;
+      font-size: $fontLarge;
+      transition: $transitionSlow;
+      margin: 0;
+      padding: 0;
+      padding-top: $space * 2;
+      color: $blackBlue;
+
+      @media screen and (max-width: $mobile) {
+        text-align: left;
+        padding-left: $space;
+      }
+    }
+
+    .p {
+      @include pad-x(2);
+      margin-top: $space * 2;
+      margin-bottom: $space;
+      display: flex;
+      font-size: $fontMedium;
+      text-align: justify;
+      opacity: 0;
+      transform: translateY(60px);
+
+      @media screen and (max-width: $mobile) {
+        @include pad-x(1);
+        text-align: left;
+        font-size: $fontMediumMobile;
+      }
+
+      .content {
+        width: 100%;
+      }
+
+      &.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .parallax-line {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: $space * 2;
+      padding-bottom: $space * 2;
+
+      .line {
+        background-image: linear-gradient(to right, $blackBlue 50%, rgba(255,255,255,0) 0%);
+        background-position: bottom;
+        background-size: $space * 2 $space;
+        background-repeat: repeat-x;
+        width: 0;
+        height: 4px;
+        transition: $transitionSlow;
+      }
+
+      @media screen and (max-width: $mobile) {
+        justify-content: flex-start;
+      }
+
+      &.active {
+        .line {
+          width: 40%;
+
+          @media screen and (max-width: $mobile) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .background {
+    position: absolute;
+    top: 1;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: $indexSection - 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .bubble {
+      width: $bubbleSize;
+      height: $bubbleSize;
+      border-radius: $bubbleSize / 2;
+      background: $whiteBlue;
+      transform: scale(1, 1);
+      transition: $transitionVerySlow;
+      opacity: 0;
+
+      &:nth-child(3n-2) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &:nth-child(3n-1) {
+        border-bottom-right-radius: 0;
+      }
+
+      &:nth-child(3n) {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &.active {
+        opacity: 0.5;
+        transform: scale(2, 2);
+      }
+    }
+  }
+}

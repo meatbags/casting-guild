@@ -1,3 +1,36 @@
 .parallax {
   transition: $transitionSlow;
 }
+
+.parallax-next {
+  @include pad-xy(3, 2);
+
+  transition: $transitionSlow;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: $space * 2;
+  color: inherit;
+  overflow: hidden;
+  opacity: 0;
+  font-size: $fontMedium;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  z-index: $indexSection + 1;
+
+  .parallax-next__inner {
+    transform: translateY(60px);
+    transition: $transitionSlow;
+  }
+
+  &.active {
+    opacity: 1;
+
+    .parallax-next__inner {
+      transform: translateY(0);
+    }
+  }
+}

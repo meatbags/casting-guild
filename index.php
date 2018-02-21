@@ -11,11 +11,7 @@
 				$query->the_post();
 				  global $post;
 				  $name = $post->post_name;
-				?>
-					<div class='section' id='<?php echo $name; ?>'>
-				    <?php get_template_part('index', $name); ?>
-					</div>
-				<?php
+				  get_template_part('index', $name);
 				endwhile;
  		endif;
 	?>
