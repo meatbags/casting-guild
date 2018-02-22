@@ -16,7 +16,11 @@
       <div class='parallax parallax-next'>
         <div class='parallax-next__inner'>&darr;</div>
       </div>
-      <br /><br />
+    </div>
+    <div class='background-image'>
+      <div class='background-image__inner'>
+        <img src='<?php echo $dir;?>/lib/img/background.jpg' />
+      </div>
     </div>
   </div>
 </div>

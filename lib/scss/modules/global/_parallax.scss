@@ -2,6 +2,46 @@
   transition: $transitionSlow;
 }
 
+.parallax-images {
+  width: 100%;
+  position: relative;
+  margin-bottom: $space;
+  margin-top: $space * 3;
+  pointer-events: all;
+  position: relative;
+  opacity: 0;
+  transform: translateY(60px);
+  padding-left: $space * 2;
+  padding-right: $space * 2;
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .parallax-images__inner {
+    width: 100%;
+
+    .image {
+      width: 100%;
+      //filter: saturate(50%);
+      margin: 0;
+      padding: 0;
+
+      img {
+        width: 100%;
+        height: auto;
+        transition: $transition;
+      }
+
+      &:hover {
+        img {
+        }
+      }
+    }
+  }
+}
+
 .parallax-next {
   @include pad-xy(3, 2);
 
@@ -13,7 +53,7 @@
   color: inherit;
   overflow: hidden;
   opacity: 0;
-  font-size: $fontMedium;
+  font-size: $fontMediumLarge;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

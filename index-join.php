@@ -10,6 +10,7 @@
       <div class='parallax parallax-line'>
         <div class='line'></div>
       </div>
+      <?php get_template_part('list-images'); ?>
       <?php
         foreach ($arr as $p):
           $pretty = str_replace('</p>', '', $p);

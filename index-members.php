@@ -15,15 +15,17 @@
       <div class='members-search'>
         <?php echo $content; ?>
         <div class='search-by-name'>
-          <input type='text' placeholder='Search Name.' id='filter-name'></input>
+          <input type='text' placeholder='&#x1F50D; Search.' id='filter-name'></input>
           <div class='search-by-name__submit'>
             <div class='filter-name-search'>Search Members.</div>
-            <!--<div class='filter-name-clear'>Clear.</div>-->
           </div>
         </div>
         <div class='parallax parallax-line'>
           <div class='line'></div>
         </div>
+
+        <?php get_template_part('list-images'); ?>
+
         <div class='search-by-state'>
           <div class='filter-state__item' data-state='nsw'>NSW.</div>
           <div class='filter-state__item' data-state='vic'>VIC.</div>

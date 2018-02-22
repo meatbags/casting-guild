@@ -6,8 +6,39 @@ $titleOutline: $deepBlue;
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: $indexSection;
   color: white;
+
+  .background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.08;
+    filter: saturate(0%) contrast(125%);
+
+    .background-image__inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1920px;
+        height: auto;
+      }
+    }
+  }
+
+  .parallax-next {
+    bottom: 0;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   .section-home__inner {
     @extend .section-inner;
@@ -20,6 +51,7 @@ $titleOutline: $deepBlue;
     justify-content: center;
     flex-direction: column;
     position: relative;
+    z-index: $indexSection;
 
     .title-box {
       display: flex;

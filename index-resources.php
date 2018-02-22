@@ -9,6 +9,7 @@
       <div class='parallax parallax-line'>
         <div class='line'></div>
       </div>
+      <?php get_template_part('list-images'); ?>
       <div class='parallax p'>
         <?php echo $content; ?>
       </div>

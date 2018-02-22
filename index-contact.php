@@ -7,11 +7,13 @@
 
 <div class='section'>
   <div class='section-contact'>
+
     <div class='section-contact__inner'>
       <h1 class='title parallax'>Contact.</h1>
       <div class='parallax parallax-line'>
         <div class='line'></div>
       </div>
+      <?php get_template_part('list-images'); ?>
       <div class='section-emails'>
         <?php
         if ($emails):
@@ -71,6 +73,7 @@
         <?php //echo $content; ?>
         <br /><br />
       </div>
+      <?php get_template_part('list-images'); ?>
     </div>
   </div>
 </div>
