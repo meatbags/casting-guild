@@ -14,6 +14,11 @@
   padding-left: $space * 2;
   padding-right: $space * 2;
 
+  @media screen and (max-width: $mobile) {
+    padding-left: $space;
+    padding-right: $space;
+  }
+
   &.active {
     opacity: 1;
     transform: translateY(0);
