@@ -19,7 +19,7 @@
     </div>
     <div class='background-image'>
       <div class='background-image__inner'>
-        <img src='<?php echo $dir;?>/lib/img/background.jpg' />
+        <img src='<?php echo $dir;?>/lib/img/background_casting_wall.jpg' />
       </div>
     </div>
   </div>
