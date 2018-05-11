@@ -4,8 +4,8 @@
 ?>
 
 <div class='section'>
-  <div class='section-join'>
-    <div class='section-join__inner'>
+  <div class='section-generic'>
+    <div class='section-generic__inner'>
       <h1 class='title parallax'><?php echo get_the_title(); ?></h1>
       <div class='parallax parallax-line'>
         <div class='line'></div>

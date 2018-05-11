@@ -1,21 +1,18 @@
 // defaults
-
 $fontStack: 'Karla', sans-serif;
 $fontSerif: 'Playfair Display', serif;
 
 // sizing
-
-$fontSmall: 16px;
-$fontSize: 20px;
-$fontMedium: 24px;
-$fontMediumLarge: 30px;
-$fontLarge: 55px;
-$fontHuge: 70px;
+$fontSmall: 14px;
+$fontSize: 17px;
+$fontMedium: 22px;
+$fontMediumLarge: 28px;
+$fontLarge: 50px;
+$fontHuge: 60px;
 $letterSpacing: 0;
-$lineHeight: 1.33;
+$lineHeight: 1.25;
 
 // responsive tablet
-
 $fontSmallTablet: 15px;
 $fontSizeTablet: 17px;
 $fontMediumTablet: 24px;
@@ -25,7 +22,6 @@ $letterSpacingTablet: 0;
 $lineHeightTablet: 1.5;
 
 // responsive mobile
-
 $fontSmallMobile: 14px;
 $fontSizeMobile: 16px;
 $fontMediumMobile: 20px;
@@ -34,7 +30,6 @@ $letterSpacingMobile: 0;
 $lineHeightMobile: 1.2;
 
 // helpers
-
 .text-small {
   font-size: $fontSmall;
 }

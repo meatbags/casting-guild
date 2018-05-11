@@ -91,7 +91,8 @@ $titleOutline: $deepBlue;
         }
 
         .line {
-          background-image: linear-gradient(to right, $white 50%, rgba(255,255,255,0) 0%);
+          background: $white;
+          //background-image: linear-gradient(to right, $white 50%, rgba(255,255,255,0) 0%);
           background-position: bottom;
           background-size: $space * 2 $space;
           background-repeat: repeat-x;

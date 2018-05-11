@@ -15,3 +15,22 @@
     width: 100%;
   }
 }
+
+.section-generic {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: $whiteBlue;
+  color: $blackBlue;
+
+  .section-generic__inner {
+    @extend .section-inner;
+    z-index: $indexSection;
+    font-family: $fontSerif;
+    display: flex;
+    flex-direction: column;
+  }
+}

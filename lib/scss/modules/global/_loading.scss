@@ -30,6 +30,7 @@
       &.active {
         transform: translateX(-100vw);
         opacity: 0;
+        border-right: 300px solid $deepBlue;
       }
     }
   }

@@ -72,7 +72,8 @@
       }
 
       .line {
-        background-image: linear-gradient(to right, $blackBlue 50%, rgba(255,255,255,0) 0%);
+        background: $blackBlue;
+        //background-image: linear-gradient(to right, $blackBlue 50%, rgba(255,255,255,0) 0%);
         background-position: bottom;
         background-size: $space * 2 $space;
         background-repeat: repeat-x;

@@ -1,5 +1,4 @@
 // colour
-
 $colourPrimary: #337e94;
 $colourMedium: lighten($colourPrimary, 10%);
 $colourSecondary: lighten($colourPrimary, 20%);
@@ -16,20 +15,17 @@ $gradientReversed: linear-gradient(to left, $colourPrimary, $colourSecondary);
 $gradientWhite: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,0));
 
 // sizing
-
-$space: 10px;
+$space: 12px;
 $sizeNav: 80px;
 $sizeFooter: 20vh;
 $offset: $space * 2;
 
 // break-points
-
-$width: 1080px;
+$width: 980px;
 $tablet: 800px;
 $mobile: 500px;
 
 // animation
-
 $transition: 0.6s;
 $transitionMedium: 0.3s;
 $transitionFast: 0.2s;
@@ -37,7 +33,6 @@ $transitionSlow: 1.1s;
 $transitionVerySlow: 2s;
 
 // indices, canvas = 5
-
 $indexImages: 3;
 $indexSection: 12;
 $indexLoading: 15;
@@ -45,7 +40,6 @@ $indexMenu: 20;
 $indexNav: 30;
 
 // borders
-
 $border: 1px solid black;
 $borderThick: 5px solid $colourSecondary;
 $borderExtra: 15px solid $colourSecondary;

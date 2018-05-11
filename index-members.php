@@ -15,7 +15,7 @@
       <div class='members-search'>
         <?php echo $content; ?>
         <div class='search-by-name'>
-          <input type='text' placeholder='&#x1F50D; Search.' id='filter-name'></input>
+          <input type='text' placeholder='Search &#9906;' id='filter-name'></input>
           <div class='search-by-name__submit'>
             <div class='filter-name-search'>Search Members.</div>
           </div>
