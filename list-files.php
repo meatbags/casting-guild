@@ -1,7 +1,7 @@
 <?php
 $files = get_field('file_list');
-if ($files): ?>
 
+if ($files): ?>
   <div class='file-list'>
   <?php foreach($files as $file):
     $title = $file['file']['title'];
@@ -17,7 +17,6 @@ if ($files): ?>
     </div>
   <?php endforeach; ?>
   </div>
-
 <?php
 endif;
 ?>

@@ -6,7 +6,7 @@
 <div class='section'>
   <div class='section-join'>
     <div class='section-join__inner'>
-      <h1 class='title parallax'>About Us.</h1>
+      <h1 class='title parallax'><?php echo get_the_title(); ?></h1>
       <div class='parallax parallax-line'>
         <div class='line'></div>
       </div>
@@ -20,8 +20,7 @@
                 <?php echo $pretty; ?>
               </div>
             </div>
-      <?php
-          endif;
+          <?php endif;
         endforeach;
         get_template_part('list-files');
         get_template_part('list-links');

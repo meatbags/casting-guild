@@ -1,7 +1,7 @@
 <?php
 $image = get_field('image');
-if ($image): ?>
 
+if ($image): ?>
   <div class='parallax parallax-images'>
     <div class='parallax-images__inner'>
       <div class='image'>
@@ -9,7 +9,6 @@ if ($image): ?>
       </div>
     </div>
   </div>
-
 <?php
 endif;
 ?>

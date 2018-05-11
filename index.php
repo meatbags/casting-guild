@@ -11,7 +11,11 @@
 				$query->the_post();
 				  global $post;
 				  $name = $post->post_name;
-				  get_template_part('index', $name);
+					if ('' != locate_template('index-' . $name . '.php')) {
+						get_template_part('index', $name);
+					} else {
+						get_template_part('index-generic');
+					}
 				endwhile;
  		endif;
 	?>
