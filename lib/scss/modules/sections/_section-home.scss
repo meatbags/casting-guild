@@ -1,4 +1,5 @@
-$titleOutline: $deepBlue;
+$a: darken($darkest, 8%);
+$b: darken($dark, 8%);
 
 .section-home {
   width: 100%;
@@ -7,6 +8,8 @@ $titleOutline: $deepBlue;
   justify-content: center;
   position: relative;
   color: white;
+  background: $darkest;
+  background: linear-gradient(65deg, $a, $b);
 
   .background-image {
     position: absolute;
@@ -15,7 +18,7 @@ $titleOutline: $deepBlue;
     top: 0;
     left: 0;
     opacity: 0.08;
-    filter: saturate(0%) contrast(125%);
+    filter: saturate(0%) contrast(150%);
 
     .background-image__inner {
       width: 100%;
@@ -38,12 +41,15 @@ $titleOutline: $deepBlue;
     right: auto;
     left: 50%;
     transform: translateX(-50%);
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   .section-home__inner {
     @extend .section-inner;
     @extend .noselect;
-
     width: 100%;
     height: 100%;
     display: flex;
@@ -58,12 +64,30 @@ $titleOutline: $deepBlue;
       flex-direction: column;
       align-items: center;
       color: $white;
+      cursor: pointer;
+
+      @media screen and (max-width: $tablet) {
+        align-items: flex-start;
+      }
+
+      .logo {
+        padding-left: $space;
+        padding-right: $space;
+
+        img {
+          @media screen and (max-width: $tablet) {
+            width: 50px;
+          }
+        }
+      }
 
       .title {
-        font-family: $fontSerif;
+        font-family: $fontTitle;
+        font-weight: lighter;
         font-size: $fontHuge;
         padding: $space;
-        text-shadow: 1px 1px $titleOutline, 1px -1px $titleOutline, -1px -1px $titleOutline, -1px 1px $titleOutline;
+        padding-bottom: $space / 2;
+        color: $white;
 
         @media screen and (max-width: $tablet) {
           font-size: $fontHugeTablet;
@@ -73,8 +97,8 @@ $titleOutline: $deepBlue;
       .est {
         padding: $space;
         font-family: $fontSerif;
-        text-transform: uppercase;
-        text-shadow: 1px 1px $titleOutline, 1px -1px $titleOutline, -1px -1px $titleOutline, -1px 1px $titleOutline;
+        font-weight: lighter;
+        //text-transform: uppercase;
 
         @media screen and (max-width: $mobile) {
           width: 100%;
@@ -91,13 +115,10 @@ $titleOutline: $deepBlue;
         }
 
         .line {
-          background: $white;
-          //background-image: linear-gradient(to right, $white 50%, rgba(255,255,255,0) 0%);
-          background-position: bottom;
-          background-size: $space * 2 $space;
-          background-repeat: repeat-x;
+          border-top: $white 1px solid;
+          border-bottom: $white 1px solid;
           width: 0;
-          height: 3px;
+          height: $doubleLineSpace;
           transition: $transitionSlow;
         }
 

@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   color: $white;
-  background-color: $deepBlue;
+  background-color: $dark;
   position: relative;
   font-family: $fontSerif;
 
@@ -18,37 +18,19 @@
       width: 100%;
     }
 
-    .footer__copyright {
-      font-size: $fontLarge;
-      pointer-events: none;
+    .footer-list {
       width: 100%;
-      text-align: right;
+      display: flex;
+      flex-direction: column;
 
-      @media screen and (max-width: $tablet) {
-        text-align: center;
-      }
+      .item {
+        width: 100%;
+        color: $white;
+        text-align: right;
 
-      @media screen and (max-width: $width) {
-        font-size: $fontLargeTablet;
-        padding: $space * 2;
-      }
-
-      @media screen and (max-width: $mobile) {
-        font-size: $fontLargeMobile;
-      }
-    }
-
-    .footer__credit {
-      width: 100%;
-      text-align: right;
-
-      @media screen and (max-width: $tablet) {
-        text-align: center;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: underline;
+        a {
+          color: $white;
+        }
       }
     }
   }

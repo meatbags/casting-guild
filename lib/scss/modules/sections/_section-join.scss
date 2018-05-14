@@ -6,10 +6,10 @@ $bulletSize: 30px;
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
-  background: $whiteBlue;
-  color: $blackBlue;
+  background: $lightest;
+  color: $darkest;
 
   .section-join__inner {
     @extend .section-inner;
@@ -19,22 +19,6 @@ $bulletSize: 30px;
     flex-direction: column;
     justify-content: center;
 
-    .title {
-      width: 100%;
-      text-align: center;
-      font-size: $fontLarge;
-      transition: $transitionSlow;
-      margin: 0;
-      padding: 0;
-      padding-top: $space * 2;
-      color: $blackBlue;
-
-      @media screen and (max-width: $mobile) {
-        text-align: left;
-        padding-left: $space;
-      }
-    }
-
     .p {
       @include pad-x(2);
       margin-top: $space * 2;
@@ -42,8 +26,8 @@ $bulletSize: 30px;
       display: flex;
       font-size: $fontMedium;
       text-align: justify;
-      opacity: 0;
-      transform: translateY(60px);
+      //opacity: 0;
+      //transform: translateY(60px);
 
       @media screen and (max-width: $mobile) {
         @include pad-x(1);
@@ -58,39 +42,6 @@ $bulletSize: 30px;
       &.active {
         opacity: 1;
         transform: translateY(0);
-      }
-    }
-
-    .parallax-line {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      padding-top: $space * 2;
-      padding-bottom: $space * 2;
-
-      .line {
-        background: $blackBlue;
-        //background-image: linear-gradient(to right, $blackBlue 50%, rgba(255,255,255,0) 0%);
-        background-position: bottom;
-        background-size: $space * 2 $space;
-        background-repeat: repeat-x;
-        width: 0;
-        height: 4px;
-        transition: $transitionSlow;
-      }
-
-      @media screen and (max-width: $mobile) {
-        justify-content: flex-start;
-      }
-
-      &.active {
-        .line {
-          width: 40%;
-
-          @media screen and (max-width: $mobile) {
-            width: 100%;
-          }
-        }
       }
     }
   }
@@ -110,7 +61,7 @@ $bulletSize: 30px;
       width: $bubbleSize;
       height: $bubbleSize;
       border-radius: $bubbleSize / 2;
-      background: $whiteBlue;
+      background: $lightest;
       transform: scale(1, 1);
       transition: $transitionVerySlow;
       opacity: 0;

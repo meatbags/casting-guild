@@ -7,11 +7,9 @@
 
 <div class='footer'>
 	<div class='footer__inner'>
-		<div class='footer__copyright'>
-			&copy; CGA <?php echo date("Y"); ?>&nbsp;.
-		</div>
-		<div class='footer__credit'>
-			<a target='_blank' href='http://xavierburrow.com'>Website by XB.</a>
+		<div class='footer-list'>
+			<div class='item'>&copy; CGA <?php echo date("Y"); ?>&nbsp;</div>
+			<div class='item'><a target='_blank' href='http://xavierburrow.com'>Website by XB</a></div>
 		</div>
 	</div>
 </div>

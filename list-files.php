@@ -9,10 +9,16 @@ if ($files): ?>
     $url = $file['file']['url'];
     ?>
     <div class='file'>
-      <a target='_blank' href='<?php echo $url; ?>'>
-        <div class='file__inner'>
-          &rarr;&nbsp;&nbsp;<?php echo $title; ?>
-        </div>
+      <div class='file__inner'>
+        <a target='_blank' href='<?php echo $url; ?>'>
+          <div class='file-icon'>
+            &#128462;
+          </div>
+          <div class='file-name'>
+            <?php echo $title; ?>
+          </div>
+        </a>
+      </div>
       </a>
     </div>
   <?php endforeach; ?>

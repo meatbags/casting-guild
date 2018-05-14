@@ -6,23 +6,25 @@
 <div class='section'>
   <div class='section-join'>
     <div class='section-join__inner'>
-      <h1 class='title parallax'>About Us.</h1>
+      <?php get_template_part('list-images'); ?>
+      <h1 class='title parallax'>About Us</h1>
       <div class='parallax parallax-line'>
         <div class='line'></div>
       </div>
-      <?php get_template_part('list-images'); ?>
       <?php
         foreach ($arr as $p):
           $pretty = str_replace('</p>', '', $p);
           if ($pretty != ''): ?>
-            <div class='p parallax'>
-              <div class='content'>
-                <?php echo $pretty; ?>
-              </div>
+          <div class='p'>
+            <div class='content'>
+              <?php echo $pretty; ?>
             </div>
-      <?php
+          </div>
+          <?php
           endif;
         endforeach;
+      ?>
+      <?php
         get_template_part('list-files');
         get_template_part('list-links');
       ?>

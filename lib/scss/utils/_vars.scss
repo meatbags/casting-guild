@@ -2,20 +2,26 @@
 $colourPrimary: #337e94;
 $colourMedium: lighten($colourPrimary, 10%);
 $colourSecondary: lighten($colourPrimary, 20%);
-$colourLink: #3e42f3;
-$deepBlue: #228;
-$lightBlue: #22f;
-$whiteBlue: #eef;
-$blackBlue: #114;
+
 $black: #000;
-$grey: #aaa;
 $white: #fff;
+$grey: #aaa;
+
+$dark: #267;
+$medium: #189;
+$light: #6cd;
+$darkest: darken($dark, 22%);
+$lightest: lighten($light, 30%);
+
+$colourLink: $dark;
 $gradient: linear-gradient(to right, $colourPrimary, $colourSecondary);
 $gradientReversed: linear-gradient(to left, $colourPrimary, $colourSecondary);
 $gradientWhite: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,0));
 
 // sizing
 $space: 12px;
+$lineSpace: 1px;
+$doubleLineSpace: 4px;
 $sizeNav: 80px;
 $sizeFooter: 20vh;
 $offset: $space * 2;

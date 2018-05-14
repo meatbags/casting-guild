@@ -11,6 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:200,400" rel="stylesheet">
 	<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/lib/icons/favicon.png">
 	<?php wp_head(); ?>
 
@@ -23,7 +24,7 @@
 		/* ]]> */
 	</script>
 
-	<!-- case noscript, open all interactive tabs, rm scripted elements -->
+	<!-- open all interactive tabs, rm scripted elements -->
 	<noscript>
     <style>
 			.section__body {

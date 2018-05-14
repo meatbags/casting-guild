@@ -33,6 +33,17 @@
   padding-right: $space * $x;
 }
 
+.chevron-down {
+  width: $space * 2;
+  height: $space * 2;
+  border-right: 4px double $white;
+  border-bottom: 4px double white;
+  transform: rotate(45deg) translate(8px, -10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .noselect {
   user-select: none;
 }

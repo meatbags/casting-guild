@@ -18,19 +18,19 @@
     justify-content: space-around;
 
     .loading__background__tab {
-      background: $whiteBlue;
+      background: $lightest;
       transition: $transitionSlow;
       width: 100%;
       height: 100%;
       margin: 0;
       padding: 0;
       flex: 1;
-      border-right: $space solid $deepBlue;
+      border-right: $space solid $dark;
 
       &.active {
-        transform: translateX(-100vw);
-        opacity: 0;
-        border-right: 300px solid $deepBlue;
+        transform: translateX(-101vw);
+        //opacity: 0;
+        border-right: 250px solid $dark;
       }
     }
   }

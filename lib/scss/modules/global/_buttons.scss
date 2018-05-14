@@ -1,6 +1,5 @@
 .button-list {
   @include pad-xy(2, 1);
-
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -20,11 +19,11 @@
 .button {
   display: flex;
   cursor: pointer;
-  color: $blackBlue;
+  color: $darkest;
   border: 0 solid $colourSecondary;
   border-right: $space solid $colourSecondary;
   margin-bottom: $space;
-  border: 3px dashed $blackBlue;
+  border: 4px double $darkest;
   font-size: $fontMedium;
   font-family: $fontStack;
 
@@ -49,8 +48,8 @@
   }
 
   &:hover {
-    border: 3px dashed $lightBlue;
-    color: $lightBlue;
+    border-color: $light;
+    color: $light;
 
     .button__inner {
     }

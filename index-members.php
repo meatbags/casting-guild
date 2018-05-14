@@ -17,7 +17,7 @@
         <div class='search-by-name'>
           <input type='text' placeholder='Search &#9906;' id='filter-name'></input>
           <div class='search-by-name__submit'>
-            <div class='filter-name-search'>Search Members.</div>
+            <div class='filter-name-search'>Search Members</div>
           </div>
         </div>
         <div class='parallax parallax-line'>

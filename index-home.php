@@ -7,14 +7,19 @@
   <div class='section-home'>
     <div class='section-home__inner'>
       <div class='title-box'>
-        <div class='title'>The Casting Guild of Australia.</div>
+        <div class='logo'>
+          <img title='CGA Logo' alt='CGA-logo' src='<?php echo get_template_directory_uri(); ?>/lib/img/cga-logo.png'>
+        </div>
+        <div class='title'>CASTING GUILD of AUSTRALIA</div>
         <div class='parallax double-line'>
           <div class='line'></div>
         </div>
-        <div class='est'>EST. 2013</div>
+        <div class='est'>Established 2013</div>
       </div>
       <div class='parallax parallax-next'>
-        <div class='parallax-next__inner'>&darr;</div>
+        <div class='parallax-next__inner'>
+          <div class='chevron-down'></div>
+        </div>
       </div>
     </div>
     <div class='background-image'>

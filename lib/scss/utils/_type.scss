@@ -1,14 +1,16 @@
 // defaults
 $fontStack: 'Karla', sans-serif;
-$fontSerif: 'Playfair Display', serif;
+//$fontSerif: 'Playfair Display', serif;
+$fontTitle: 'Raleway', sans-serif;
+$fontSerif: $fontTitle;
 
 // sizing
 $fontSmall: 14px;
 $fontSize: 17px;
-$fontMedium: 22px;
-$fontMediumLarge: 28px;
-$fontLarge: 50px;
-$fontHuge: 60px;
+$fontMedium: 20px;
+$fontMediumLarge: 26px;
+$fontLarge: 45px;
+$fontHuge: 46px;
 $letterSpacing: 0;
 $lineHeight: 1.25;
 
@@ -17,7 +19,7 @@ $fontSmallTablet: 15px;
 $fontSizeTablet: 17px;
 $fontMediumTablet: 24px;
 $fontLargeTablet: 42px;
-$fontHugeTablet: 50px;
+$fontHugeTablet: 40px;
 $letterSpacingTablet: 0;
 $lineHeightTablet: 1.5;
 

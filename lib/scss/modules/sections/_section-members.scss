@@ -8,17 +8,17 @@
 
   .section-members__inner {
     @extend .section-inner;
-
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     z-index: $indexSection;
 
     .members-search {
-      padding-top: $space;
+      padding-top: $space * 3;
       width: 100%;
       display: flex;
       flex-direction: column;
-      min-height: 36.5vh;
+      //min-height: 36.5vh;
       justify-content: flex-end;
       font-family: $fontSerif;
 
@@ -30,7 +30,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
 
         @media screen and (max-width: $mobile) {
           padding-left: $space;
@@ -39,14 +39,13 @@
 
         input {
           @include pad-xy(1, 0.5);
-
-          background: $whiteBlue;
+          background: $lightest;
           border-radius: 0;
           border: none;
-          border-right: $space solid $blackBlue;
+          border-left: $space solid $darkest;
           outline: none !important;
           font-size: $fontMedium;
-          text-align: right;
+          text-align: left;
           width: 50%;
           font-family: $fontSerif;
           margin-bottom: $space * 2;
@@ -60,7 +59,7 @@
             font-size: $fontLarge;
 
             &:hover {
-              color: $lightBlue;
+              color: $lightest;
             }
           }
         }
@@ -92,7 +91,7 @@
 
       .search-by-state {
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         cursor: pointer;
         padding-bottom: $space * 4;
         font-size: $fontMedium;
@@ -103,10 +102,10 @@
         }
 
         .filter-state__item {
-          padding-left: $space * 1.5;
+          padding-right: $space * 1.5;
 
           &:hover {
-            color: $lightBlue;
+            color: $lightest;
           }
         }
       }
@@ -114,17 +113,18 @@
       .parallax-line {
         width: 100%;
         display: flex;
-        justify-content: flex-end;
-        @include pad-y(2);
+        justify-content: flex-start;
+        padding: 0;
+        padding-top: $space;
+        padding-bottom: $space * 2;
 
         .line {
           background: $black;
-          //background-image: linear-gradient(to right, $black 50%, rgba(255,255,255,0) 0%);
           background-position: bottom;
           background-size: $space * 2 $space;
           background-repeat: repeat-x;
           width: 0;
-          height: 3px;
+          height: $lineSpace;
           transition: $transitionSlow;
         }
 
@@ -139,7 +139,7 @@
     .members-list {
       width: 100%;
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: row;
 
       @media screen and (max-width: $mobile) {
         padding-left: $space;
@@ -151,7 +151,7 @@
 
         .member {
           width: 100%;
-          text-align: right;
+          text-align: left;
           transition: all $transition, opacity $transitionFast;
           position: relative;
           overflow: hidden;
@@ -160,7 +160,7 @@
             .member__inner {
               .member__header {
                 .member__header__name {
-                  color: $lightBlue;
+                  color: $light;
                 }
               }
             }
@@ -227,7 +227,7 @@
           .no-members__inner {
             position: absolute;
             top: 0;
-            right: 0;
+            left: 0;
 
             @media screen and (max-width: $mobile) {
               right: $space;

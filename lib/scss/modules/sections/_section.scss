@@ -1,8 +1,21 @@
 .section {
   width: 100%;
 
-  &:nth-child(1) {
-    background: $deepBlue;
+  .title {
+    @include pad-x(2);
+    width: 100%;
+    text-align: left;
+    font-size: $fontLarge;
+    transition: $transitionSlow;
+    margin: 0;
+    padding-top: $space * 2;
+    color: $darkest;
+    font-weight: lighter;
+
+    @media screen and (max-width: $mobile) {
+      text-align: left;
+      padding-left: $space;
+    }
   }
 }
 
@@ -23,8 +36,8 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  background: $whiteBlue;
-  color: $blackBlue;
+  background: $lightest;
+  color: $darkest;
 
   .section-generic__inner {
     @extend .section-inner;

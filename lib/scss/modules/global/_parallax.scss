@@ -79,3 +79,34 @@
     }
   }
 }
+
+.parallax-line {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 0;
+  padding-bottom: $space * 2;
+  padding-left: $space * 2;
+
+  .line {
+    border-top: 1px solid $darkest;
+    border-bottom: 1px solid $darkest;
+    width: 0;
+    height: $doubleLineSpace;
+    transition: $transitionSlow;
+  }
+
+  @media screen and (max-width: $mobile) {
+    justify-content: flex-start;
+  }
+
+  &.active {
+    .line {
+      width: 40%;
+
+      @media screen and (max-width: $mobile) {
+        width: 100%;
+      }
+    }
+  }
+}

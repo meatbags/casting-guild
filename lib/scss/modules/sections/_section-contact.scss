@@ -7,7 +7,7 @@
 
   .section-contact__inner {
     @extend .section-inner;
-    text-align: right;
+    text-align: left;
     font-size: $fontMedium;
     font-family: $fontSerif;
     color: black;
@@ -16,24 +16,14 @@
       text-align: center;
     }
 
-    .title {
+    .section-contact__inner__body {
       width: 100%;
-      font-size: $fontLarge;
-      transition: $transitionSlow;
-      margin: 0;
-      padding: 0;
-      padding-top: $space * 2;
-      color: $blackBlue;
-
-      @media screen and (max-width: $mobile) {
-        padding-left: $space;
-        text-align: left;
-      }
+      @include pad-x(2);
     }
 
     a {
       &:hover {
-        color: $deepBlue;
+        color: $dark;
       }
     }
 
@@ -42,34 +32,6 @@
         width: 100%;
         text-align: left;
         padding-left: $space;
-      }
-    }
-
-    .parallax-line {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      @include pad-y(2);
-
-      @media screen and (max-width: $mobile) {
-        justify-content: flex-start;
-      }
-
-      .line {
-        background: $black;
-        //background-image: linear-gradient(to right, $black 50%, rgba(255,255,255,0) 0%);
-        background-position: bottom;
-        background-size: $space * 2 $space;
-        background-repeat: repeat-x;
-        width: 0;
-        height: 3px;
-        transition: $transitionSlow;
-      }
-
-      &.active {
-        .line {
-          width: 100%;
-        }
       }
     }
   }
