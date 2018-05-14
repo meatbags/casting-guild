@@ -1,0 +1,10 @@
+.section-awards {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .section-awards__inner {
+    @include pad-x(2);
+  }
+}

@@ -1,6 +1,6 @@
 <?php
-$image = get_field('image');
 $title = get_the_title();
+$image = get_field('image');
 
 if ($image): ?>
   <div class='image-title'>
@@ -10,5 +10,9 @@ if ($image): ?>
     </div>
   </div>
 <?php else: ?>
-  <h1 class='title parallax'><?php echo $title; ?></h1>
+  <div class='colour-title parallax'>
+    <div class='colour-title__inner'>
+      <h1 class='title'><?php echo $title; ?>.</h1>
+    </div>
+  </div>
 <?php endif; ?>

@@ -5,6 +5,7 @@
     <div class='menu-item' data-target='.section-awards'>CGA awards.</div>
     <div class='menu-item' data-target='.section-members'>members.</div>
     <div class='menu-item' data-target='.section-resources'>resources.</div>
+    <div class='menu-item' data-target='.section-policies'>policies.</div>
     <div class='menu-item' data-target='.section-contact'>contact.</div>
   </div>
 </div>

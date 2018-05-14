@@ -1,0 +1,69 @@
+.section-policies {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  @include pad-x(2);
+
+  .section-policies__inner {
+    .parallax-line {
+      padding: 0;
+    }
+
+    .policy {
+      @include pad-x(2);
+      margin-top: $space * 4;
+      margin-bottom: $space * 4;
+
+      @media screen and (max-width: $mobile) {
+        @include pad-x(1);
+      }
+
+      .policy-header {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+
+        .policy-title {
+          @include pad-x(1);
+          font-size: $fontMediumLarge;
+          background: $light;
+          //text-transform: uppercase;
+        }
+
+        .policy-url {
+          flex: 1;
+
+          a {
+            display: flex;
+            @include pad-x(1);
+            align-items: flex-end;
+            text-decoration: none;
+            border-bottom: 1px solid $light;
+
+            &:hover {
+              color: $light;
+            }
+
+            .file-icon {
+              padding-left: $space / 2;
+              font-size: $fontMedium;
+            }
+          }
+
+          .coming-soon {
+            @include pad-x(1);
+            color: $light;
+            user-select: none;
+            border-bottom: 1px solid $light;
+          }
+        }
+      }
+
+      .policy-body {
+        padding-top: $space * 2;
+        font-size: $fontMedium;
+      }
+    }
+  }
+}

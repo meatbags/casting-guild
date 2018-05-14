@@ -1,23 +1,6 @@
 .section {
   width: 100%;
 
-  .title {
-    @include pad-x(2);
-    width: 100%;
-    text-align: left;
-    font-size: $fontLarge;
-    transition: $transitionSlow;
-    margin: 0;
-    padding-top: $space * 2;
-    color: $darkest;
-    font-weight: lighter;
-
-    @media screen and (max-width: $mobile) {
-      text-align: left;
-      padding-left: $space;
-    }
-  }
-
   .image-title {
     user-select: none;
     width: 100%;

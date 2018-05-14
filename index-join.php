@@ -1,15 +1,14 @@
 <?php
   $content = apply_filters('the_content', get_the_content());
   $arr = explode('<p>', $content);
+  $url = get_template_directory_uri() . '/lib/img/background-cga.jpg';
 ?>
 
 <div class='section'>
   <div class='section-join'>
     <div class='section-join__inner'>
       <?php get_template_part('list-image-title'); ?>
-      <div class='parallax parallax-line'>
-        <div class='line'></div>
-      </div>
+      <br />
       <?php
         foreach ($arr as $p):
           $pretty = str_replace('</p>', '', $p);

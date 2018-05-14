@@ -6,6 +6,7 @@
   position: relative;
   background: $lightest;
   color: $darkest;
+  background-color: $lightest;
 
   .section-join__inner {
     @extend .section-inner;
@@ -22,8 +23,6 @@
       display: flex;
       font-size: $fontMedium;
       text-align: justify;
-      //opacity: 0;
-      //transform: translateY(60px);
 
       @media screen and (max-width: $mobile) {
         @include pad-x(1);

@@ -1,32 +1,14 @@
 <?php
+  $title = get_the_title();
   $content = apply_filters('the_content', get_the_content());
-  $arr = explode('<p>', $content);
+  $awards = get_field('award');
 ?>
 
-<div class='section'>
-  <div class='section-join'>
-    <div class='section-join__inner'>
-      <?php get_template_part('list-image-title'); ?>
-      <div class='parallax parallax-line'>
-        <div class='line'></div>
-      </div>
-      <?php
-        foreach ($arr as $p):
-          $pretty = str_replace('</p>', '', $p);
-          if ($pretty != ''): ?>
-            <div class='p parallax'>
-              <div class='content'>
-                <?php echo $pretty; ?>
-              </div>
-            </div>
-          <?php endif;
-        endforeach;
-        get_template_part('list-files');
-        get_template_part('list-links');
-      ?>
-    </div>
-    <div class='parallax parallax-next'>
-      <div class='parallax-next__inner'>&darr;</div>
-    </div>
+<div class='section section-awards'>
+  <div class='section-inner section-awards__inner'>
+    <?php
+      echo $title;
+      echo $content;
+    ?>
   </div>
 </div>

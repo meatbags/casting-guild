@@ -19,7 +19,6 @@ if ($files): ?>
           </div>
         </a>
       </div>
-      </a>
     </div>
   <?php endforeach; ?>
   </div>

@@ -1,8 +1,9 @@
 // defaults
-$fontStack: 'Karla', sans-serif;
 //$fontSerif: 'Playfair Display', serif;
 $fontTitle: 'Raleway', sans-serif;
 $fontSerif: $fontTitle;
+//$fontStack: 'Karla', sans-serif;
+$fontStack: $fontTitle;
 
 // sizing
 $fontSmall: 14px;

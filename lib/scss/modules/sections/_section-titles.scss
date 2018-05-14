@@ -1,0 +1,61 @@
+.title {
+  @include pad-x(2);
+  width: 100%;
+  text-align: left;
+  font-size: $fontLarge;
+  transition: $transitionSlow;
+  margin: 0;
+  padding-top: $space * 2;
+  color: $darkest;
+  font-weight: lighter;
+
+  @media screen and (max-width: $mobile) {
+    text-align: left;
+    padding-left: $space;
+  }
+}
+
+.colour-title {
+  margin-top: $space * 2;
+  padding-left: $space * 2;
+  padding-right: $space * 2;
+  user-select: none;
+
+  @media screen and (max-width: $mobile) {
+    padding-left: $space;
+    padding-right: $space;
+  }
+
+  .colour-title__inner {
+    background: $light;
+    width: 0%;
+    overflow: hidden;
+    transition: 1s;
+    height: 200px;
+    position: relative;
+    border-right: $space* 2 solid $medium;
+
+    .title {
+      padding: $space;
+      padding-bottom: $space / 2;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: $white;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+  }
+
+  &.active {
+    .colour-title__inner {
+      width: 55%;
+    }
+
+    @media screen and (max-width: $tablet) {
+      .colour-title__inner {
+        width: 100%;
+      }
+    }
+  }
+}

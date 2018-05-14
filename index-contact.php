@@ -9,9 +9,6 @@
   <div class='section-contact'>
     <div class='section-contact__inner'>
       <?php get_template_part('list-image-title'); ?>
-      <div class='parallax parallax-line'>
-        <div class='line'></div>
-      </div>
       <div class='section-contact__inner__body'>
         <div class='section-emails'>
           <?php
