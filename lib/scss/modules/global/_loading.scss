@@ -25,11 +25,10 @@
       margin: 0;
       padding: 0;
       flex: 1;
-      border-right: $space solid $dark;
+      border-right: 0px solid $dark;
 
       &.active {
         transform: translateX(-101vw);
-        //opacity: 0;
         border-right: 250px solid $dark;
       }
     }

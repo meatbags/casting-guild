@@ -6,8 +6,7 @@
 <div class='section'>
   <div class='section-join'>
     <div class='section-join__inner'>
-      <?php get_template_part('list-images'); ?>
-      <h1 class='title parallax'>About Us</h1>
+      <?php get_template_part('list-image-title'); ?>
       <div class='parallax parallax-line'>
         <div class='line'></div>
       </div>

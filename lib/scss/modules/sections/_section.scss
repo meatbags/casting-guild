@@ -17,6 +17,44 @@
       padding-left: $space;
     }
   }
+
+  .image-title {
+    user-select: none;
+    width: 100%;
+    padding-left: $space * 2;
+    padding-right: $space * 2;
+    margin-top: $space * 2;
+    margin-bottom: $space * 2;
+
+    .image-title__inner {
+      width: 100%;
+      position: relative;
+      $a: darken($darkest, 8%);
+      $b: darken($dark, 8%);
+      background: linear-gradient(65deg, $a, $b);
+      padding: 0;
+      display: flex;
+
+      .image-title-img {
+        width: 100%;
+        opacity: 0.25;
+        filter: saturate(0%) contrast(120%);
+      }
+
+      .image-title-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: $lightest;
+        font-size: $fontLarge * 2;
+        margin: 0;
+        padding-left: $space * 2;
+        line-height: 1;
+        font-weight: lighter;
+        margin-bottom: -4px;
+      }
+    }
+  }
 }
 
 .section-inner {

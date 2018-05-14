@@ -66,17 +66,13 @@ $b: darken($dark, 8%);
       color: $white;
       cursor: pointer;
 
-      @media screen and (max-width: $tablet) {
-        align-items: flex-start;
-      }
-
       .logo {
         padding-left: $space;
         padding-right: $space;
 
         img {
           @media screen and (max-width: $tablet) {
-            width: 50px;
+            width: 100px;
           }
         }
       }
@@ -91,6 +87,7 @@ $b: darken($dark, 8%);
 
         @media screen and (max-width: $tablet) {
           font-size: $fontHugeTablet;
+          text-align: center;
         }
       }
 
@@ -98,21 +95,12 @@ $b: darken($dark, 8%);
         padding: $space;
         font-family: $fontSerif;
         font-weight: lighter;
-        //text-transform: uppercase;
-
-        @media screen and (max-width: $mobile) {
-          width: 100%;
-        }
       }
 
       .double-line {
         width: 100%;
         display: flex;
         justify-content: center;
-
-        @media screen and (max-width: $mobile) {
-          justify-content: flex-start;
-        }
 
         .line {
           border-top: $white 1px solid;
@@ -125,10 +113,6 @@ $b: darken($dark, 8%);
         &.active {
           .line {
             width: 75%;
-
-            @media screen and (max-width: $mobile) {
-              width: 100%;
-            }
           }
         }
       }

@@ -6,6 +6,7 @@
   left: 0;
   width: 100%;
   z-index: $indexNav;
+  pointer-events: none;
 
   .nav__inner {
     width: 100%;
@@ -35,6 +36,7 @@
     .nav__menu {
       height: 100%;
       cursor: pointer;
+      pointer-events: all;
       position: relative;
       transition: $transition;
       font-size: $fontMediumLarge;

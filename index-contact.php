@@ -8,11 +8,10 @@
 <div class='section'>
   <div class='section-contact'>
     <div class='section-contact__inner'>
-      <h1 class='title parallax'>Contact</h1>
+      <?php get_template_part('list-image-title'); ?>
       <div class='parallax parallax-line'>
         <div class='line'></div>
       </div>
-      <?php get_template_part('list-images'); ?>
       <div class='section-contact__inner__body'>
         <div class='section-emails'>
           <?php

@@ -6,11 +6,11 @@
 <div class='section'>
   <div class='section-generic'>
     <div class='section-generic__inner'>
+      <?php get_template_part('list-image-title'); ?>
       <h1 class='title parallax'><?php echo get_the_title(); ?></h1>
       <div class='parallax parallax-line'>
         <div class='line'></div>
       </div>
-      <?php get_template_part('list-images'); ?>
       <?php
         foreach ($arr as $p):
           $pretty = str_replace('</p>', '', $p);
