@@ -1,12 +1,10 @@
 .section-resources {
   padding-top: $space * 3;
   width: 100%;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  background: $lightest;
   color: $darkest;
 
   .section-resources__inner {
@@ -21,6 +19,60 @@
       .title {
         text-align: left;
         padding-left: $space;
+      }
+    }
+
+    .friends {
+      @include pad-x(2);
+      width: 100%;
+
+      .friends-title {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        border-bottom: 1px solid $light;
+        margin-top: $space * 4;
+        margin-bottom: $space;
+
+        .friends-title__inner {
+          @include pad-x(1);
+          font-size: $fontMediumLarge;
+          background: $light;
+        }
+      }
+
+      .friends-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        .friend {
+          width: 25%;
+          padding: $space;
+
+          @media screen and (max-width: $mobile) {
+            width: 50%;
+          }
+
+          a {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+
+            &:hover {
+              color: $light;
+            }
+
+            .friend-img {}
+
+            .friend-label {
+              padding-left: $space / 2;
+            }
+          }
+        }
+      }
+
+      @media screen and (max-width: $mobile) {
+        @include pad-x(1);
       }
     }
 

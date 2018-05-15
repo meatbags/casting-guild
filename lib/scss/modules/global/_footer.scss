@@ -10,12 +10,17 @@
 
   .footer__inner {
     @include pad-y(4);
+    @include pad-x(2);
     width: $width;
     display: flex;
     flex-direction: column;
 
     @media screen and (max-width: $width) {
       width: 100%;
+    }
+
+    @media screen and (max-width: $mobile) {
+      @include pad-x(1);
     }
 
     .footer-list {
@@ -26,7 +31,15 @@
       .item {
         width: 100%;
         color: $white;
-        text-align: right;
+        text-align: left;
+
+        @media screen and (max-width: $mobile) {
+          text-align: center;
+        }
+
+        &:nth-child(1) {
+          font-size: $fontLarge;
+        }
 
         a {
           color: $white;

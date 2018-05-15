@@ -1,3 +1,7 @@
+.section-rising-star {
+  background: $lightest;
+}
+
 .section-awards {
   position: relative;
   width: 100%;
@@ -6,5 +10,116 @@
 
   .section-awards__inner {
     @include pad-x(2);
+
+    .colour-title {
+      padding: 0;
+    }
+
+    .section-awards-body {
+      margin-top: $space * 4;
+
+      .p {
+        font-size: $fontMedium;
+        text-align: justify;
+        margin-bottom: $space * 4;
+
+        @media screen and (max-width: $mobile) {
+          font-size: $fontMediumMobile;
+        }
+      }
+
+      .award {
+        margin-bottom: $space;
+
+        .award-header {
+          user-select: none;
+          @include pad-xy(2, 1);
+          width: 100%;
+          background: $light;
+          font-size: $fontLarge;
+          cursor: pointer;
+          border-bottom: $space / 2 solid $medium;
+
+          @media screen and (max-width: $mobile) {
+            @include pad-xy(1, 1);
+            font-size: $fontLargeMobile;
+          }
+        }
+
+        .award-body {
+          //height: 0;
+          //overflow: hidden;
+
+          .award-body__inner {
+            padding: $space;
+
+            .award-hosts {
+              padding: $space;
+              display: flex;
+              width: 100%;
+            }
+
+            .award-list {
+              display: flex;
+              flex-wrap: wrap;
+
+              .item {
+                padding: $space;
+                width: 33.33%;
+
+                .item-title {
+                  font-weight: bold;
+                  text-decoration: underline;
+                  margin-bottom: $space;
+                }
+
+                .item-recipients {
+                  font-weight: bold;
+                  font-style: italic;
+                }
+
+                .item-nominees {
+
+                }
+
+                @media screen and (max-width: $mobile) {
+                  width: 50%;
+                }
+              }
+            }
+
+            .award-gallery {
+              margin-top: $space;
+              margin-bottom: $space;
+
+              .slider-target {
+                height: 65vh;
+
+                div {
+                  padding: $space / 2;
+                  height: 100%;
+
+                  img {
+                    height: 100%;
+                  }
+                }
+
+                @media screen and (max-width: $mobile) {
+                  height: 50vh;
+
+                  div {
+                    padding: $space / 4;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: $mobile) {
+      @include pad-x(1);
+    }
   }
 }

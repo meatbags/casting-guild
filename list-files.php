@@ -10,12 +10,15 @@ if ($files): ?>
     ?>
     <div class='file'>
       <div class='file__inner'>
+        <div class='file__inner-label'>
+          <?php echo $title; ?>
+        </div>
         <a target='_blank' href='<?php echo $url; ?>'>
+          <div class='file-name'>
+            Download PDF
+          </div>
           <div class='file-icon'>
             &#128462;
-          </div>
-          <div class='file-name'>
-            <?php echo $title; ?>
           </div>
         </a>
       </div>

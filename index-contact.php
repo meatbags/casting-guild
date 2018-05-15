@@ -9,6 +9,7 @@
   <div class='section-contact'>
     <div class='section-contact__inner'>
       <?php get_template_part('list-image-title'); ?>
+
       <div class='section-contact__inner__body'>
         <div class='section-emails'>
           <?php
@@ -19,7 +20,11 @@
               ?>
             <br />
             <div class='email'>
-              <div class='email-label'><?php echo $label; ?>.</div>
+              <div class='label'>
+                <div class='label__inner'>
+                  <?php echo $label; ?>
+                </div>
+              </div>
               <div class='email-email'>
                 <a href='mailto:<?php echo $url; ?>'><?php echo $url; ?></a>
               </div>
@@ -32,7 +37,11 @@
         <?php if ($socmed): ?>
           <br />
           <div class='social-media'>
-            <div class='social-media__title'>Connect.</div>
+            <div class='label'>
+              <div class='label__inner'>
+                Connect
+              </div>
+            </div>
             <?php
               foreach ($socmed as $soc):
                 $label = $soc['label'];
@@ -45,24 +54,6 @@
             </div>
           <?php endforeach; ?>
           </div>
-        <?php endif; ?>
-
-        <?php if ($links): ?>
-          <br />
-          <div class='social-media'>
-            <div class='social-media__title'>Our friends.</div>
-              <?php foreach($links as $link):
-                $label= $link['name'];
-                $url = $link['url'];
-                //$img = $link['logo']['sizes']['thumbnail'];
-                ?>
-                <div class='social-media__link'>
-                  <a href='<?php echo $url; ?>'>
-                    <?php echo $label; ?>
-                  </a>
-                </div>
-              <?php endforeach; ?>
-            </div>
         <?php endif; ?>
         </div>
       </div>

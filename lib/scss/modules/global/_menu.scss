@@ -25,6 +25,12 @@
     display: flex;
     flex-direction: column;
 
+    .link-me {
+      &:hover {
+        color: $light;
+      }
+    }
+
     .menu-item {
       transition: transform $transitionSlow, opacity $transitionSlow;
       transform: translateX(-100px);
@@ -33,14 +39,16 @@
       cursor: pointer;
       font-size: $fontMedium;
       text-transform: uppercase;
+      display: flex;
+
+      &.menu-close {
+        font-size: $fontMedium / 2;
+        color: $light;
+      }
 
       &.active {
         opacity: 1;
         transform: translateX(0);
-      }
-
-      &:hover {
-        color: $light;
       }
     }
   }

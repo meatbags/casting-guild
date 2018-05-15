@@ -4,20 +4,20 @@
   display: flex;
   justify-content: center;
   @include pad-x(2);
+  background: $lightest;
+
+  @media screen and (max-width: $mobile) {
+    @include pad-x(1);
+  }
 
   .section-policies__inner {
-    .parallax-line {
+    .colour-title {
       padding: 0;
     }
 
     .policy {
-      @include pad-x(2);
       margin-top: $space * 4;
       margin-bottom: $space * 4;
-
-      @media screen and (max-width: $mobile) {
-        @include pad-x(1);
-      }
 
       .policy-header {
         width: 100%;
@@ -28,7 +28,6 @@
           @include pad-x(1);
           font-size: $fontMediumLarge;
           background: $light;
-          //text-transform: uppercase;
         }
 
         .policy-url {
@@ -63,6 +62,10 @@
       .policy-body {
         padding-top: $space * 2;
         font-size: $fontMedium;
+
+        @media screen and (max-width: $mobile) {
+          font-size: $fontMediumMobile;
+        }
       }
     }
   }

@@ -56,8 +56,16 @@ function custom_custom_pings( $comment ){
 add_action( 'wp_enqueue_scripts', 'custom_load_scripts' );
 function custom_load_scripts()
 {
+	// js
 	wp_enqueue_script( 'customjquery', get_stylesheet_directory_uri() . '/lib/build/jquery-3.2.1.min.js');
 	wp_enqueue_script( 'customscript', get_stylesheet_directory_uri() . '/lib/build/app.min.js');
+	wp_enqueue_script( 'customscript-slick', get_stylesheet_directory_uri() . '/lib/build/slick.min.js');
+
+	// stylez
 	wp_register_style( 'customstyle', get_stylesheet_directory_uri() . '/lib/build/style.css' );
+	wp_register_style( 'customstyle-slick', get_stylesheet_directory_uri() . '/lib/build/slick.css' );
+	wp_register_style( 'customstyle-slicktheme', get_stylesheet_directory_uri() . '/lib/build/slick-theme.css' );
 	wp_enqueue_style( 'customstyle' );
+	wp_enqueue_style( 'customstyle-slick' );
+	wp_enqueue_style( 'customstyle-slicktheme' );
 }

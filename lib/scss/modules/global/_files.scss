@@ -5,23 +5,41 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+
+  @media screen and (max-width: $mobile) {
+    @include pad-x(1);
+  }
 }
 
 .file {
-  .file__inner {
-    @include pad-xy(1, 0);
-    border: 1px solid $dark;
+  width: 100%;
 
-    &:hover {
-      opacity: 0.5;
-      border-color: $light;
+  .file__inner {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid $light;
+
+    .file__inner-label {
+      @include pad-x(2);
+      background: $light;
+      font-size: $fontMediumLarge;
+
+      @media screen and (max-width: $mobile) {
+        font-size: $fontMediumMobile;
+      }
     }
 
     a {
-      padding-left: $space;
-      padding-right: $space;
+      flex: 1;
       display: flex;
       text-decoration: none;
+      align-items: flex-end;
+      @include pad-x(1);
+
+      &:hover {
+        opacity: 0.5;
+        border-color: $light;
+      }
 
       .file-name {
         display: flex;
@@ -30,7 +48,8 @@
       }
 
       .file-icon {
-        font-size: $fontLarge;
+        padding-left: $space / 2;
+        font-size: $fontMedium;
         margin-right: $space;
       }
     }
