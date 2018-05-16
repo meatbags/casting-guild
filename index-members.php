@@ -65,14 +65,13 @@
                   <?php endif; ?></div>
                 <div class='member__body'>
                   <div class='member__body__inner'>
-                    <?php if ($email): ?>
-                      <div class='email'>
-                        <a href='mailto:<?php echo $email; ?>'><?php echo $email; ?></a>
-                      </div>
-                    <?php endif;
-                    if ($url): ?>
+                    <?php if ($url): ?>
                       <div class='website'>
                         <a target='_blank' href='<?php echo $url; ?>'>Website</a>
+                      </div>
+                    <?php elseif ($email): ?>
+                      <div class='email'>
+                        <a href='mailto:<?php echo $email; ?>'><?php echo $email; ?></a>
                       </div>
                     <?php endif; ?>
                   </div>

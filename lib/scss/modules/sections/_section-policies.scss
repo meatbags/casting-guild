@@ -3,14 +3,15 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  @include pad-x(2);
   background: $lightest;
 
-  @media screen and (max-width: $mobile) {
-    @include pad-x(1);
-  }
-
   .section-policies__inner {
+    @include pad-x(2);
+
+    @media screen and (max-width: $mobile) {
+      @include pad-x(1);
+    }
+
     .colour-title {
       padding: 0;
     }

@@ -14,7 +14,7 @@
         <div class='friends'>
           <div class='friends-title'>
             <div class='friends-title__inner'>
-              Our friends.
+              Casting Networks.
             </div>
           </div>
           <div class='friends-list'>

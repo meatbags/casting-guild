@@ -28,31 +28,43 @@
                 <?php echo $hosts; ?>
               </div>
               <div class='award-list'>
-                <?php foreach ($list as $item):
-                  $itemTitle = $item['title'];
-                  $itemRecipients = $item['recipients'];
-                  $itemNominees = $item['nominees'];
-                  ?>
-                  <div class='item'>
-                    <div class='item-title'>
-                      <?php echo $itemTitle; ?>
+              <?php if ($list):
+                  foreach ($list as $item):
+                    $itemTitle = $item['title'];
+                    $itemRecipients = $item['recipients'];
+                    $itemNominees = $item['nominees'];
+                    ?>
+                    <div class='item'>
+                      <div class='item-title'>
+                        <?php echo $itemTitle; ?>
+                      </div>
+                      <div class='item-recipients'>
+                        <?php
+                          if ($itemRecipients):
+                            foreach ($itemRecipients as $n): ?>
+                          <div class='name'>
+                            <?php echo $n['name']; ?>
+                          </div>
+                        <?php
+                            endforeach;
+                          endif;
+                        ?>
+                      </div>
+                      <div class='item-nominees'>
+                        <?php
+                          if ($itemNominees):
+                            foreach ($itemNominees as $n): ?>
+                          <div class='name'>
+                            <?php echo $n['name']; ?>
+                          </div>
+                        <?php
+                            endforeach;
+                          endif;
+                        ?>
+                      </div>
                     </div>
-                    <div class='item-recipients'>
-                      <?php foreach ($itemRecipients as $n): ?>
-                        <div class='name'>
-                          <?php echo $n['name']; ?>
-                        </div>
-                      <?php endforeach; ?>
-                    </div>
-                    <div class='item-nominees'>
-                      <?php foreach ($itemNominees as $n): ?>
-                        <div class='name'>
-                          <?php echo $n['name']; ?>
-                        </div>
-                      <?php endforeach; ?>
-                    </div>
-                  </div>
-                <?php endforeach; ?>
+                  <?php endforeach;
+                endif; ?>
               </div>
               <div class='award-gallery'>
                 <?php if ($gallery): ?>
