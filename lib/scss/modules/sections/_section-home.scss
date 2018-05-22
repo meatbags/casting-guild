@@ -2,7 +2,7 @@ $a: darken($darkest, 8%);
 $b: darken($dark, 8%);
 
 .section-home {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -10,6 +10,7 @@ $b: darken($dark, 8%);
   color: white;
   background: $darkest;
   background: linear-gradient(65deg, $a, $b);
+  overflow: hidden;
 
   .background-image {
     position: absolute;
@@ -44,6 +45,10 @@ $b: darken($dark, 8%);
 
     &:hover {
       opacity: 0.5;
+    }
+
+    @media screen and (max-width: $tablet) {
+      padding-bottom: $space * 4;
     }
   }
 

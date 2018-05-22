@@ -47,7 +47,11 @@
               $email = $member->user_email;
               $url = $member->user_url;
               $role = get_the_author_meta('aim', $member->ID);
+              $userId = 'user_' . $member->ID;
+              $showEmail = get_field('show_email', $userId);
               $state = '';
+
+              // get user location state
               foreach ($member->roles as $s) {
                 if (in_array($s, $states)) {
                   $state = $s;
@@ -66,6 +70,11 @@
                 <div class='member__body'>
                   <div class='member__body__inner'>
                     <?php if ($url): ?>
+                      <?php if ($showEmail && $email): ?>
+                        <div class='email'>
+                          <a href='mailto:<?php echo $email; ?>'><?php echo $email; ?></a>
+                        </div>
+                      <?php endif; ?>
                       <div class='website'>
                         <a target='_blank' href='<?php echo $url; ?>'>Website</a>
                       </div>

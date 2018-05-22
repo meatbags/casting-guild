@@ -27,7 +27,7 @@
       @media screen and (max-width: $mobile) {
         @include pad-x(1);
         text-align: left;
-        font-size: $fontMediumMobile;
+        font-size: $fontSizeMobile;
       }
 
       .content {
