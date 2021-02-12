@@ -4,26 +4,27 @@
 ?>
 
 <div class='section'>
-  <div class='section-generic'>
-    <div class='section-generic__inner'>
+  <div class='section-join'>
+    <div class='section-join__inner'>
       <?php get_template_part('list-image-title'); ?>
+      <br />
       <h1 class='title parallax'><?php echo get_the_title(); ?></h1>
       <div class='parallax parallax-line'>
         <div class='line'></div>
       </div>
       <?php
-        foreach ($arr as $p):
-          $pretty = str_replace('</p>', '', $p);
-          if ($pretty != ''): ?>
-            <div class='p parallax'>
-              <div class='content'>
-                <?php echo $pretty; ?>
-              </div>
+      foreach ($arr as $p):
+        $pretty = str_replace('</p>', '', $p);
+        if ($pretty != ''): ?>
+          <div class='p parallax'>
+            <div class='content'>
+              <?php echo $pretty; ?>
             </div>
-          <?php endif;
-        endforeach;
-        get_template_part('list-files');
-        get_template_part('list-links');
+          </div>
+        <?php endif;
+      endforeach;
+      get_template_part('list-files');
+      get_template_part('list-links');
       ?>
     </div>
     <div class='parallax parallax-next'>

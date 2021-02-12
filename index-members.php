@@ -58,6 +58,8 @@
                   break;
                 }
               }
+
+	      if ($state !== ''):
           ?>
 
             <div class='member' data-name='<?php echo $filterString; ?>' data-state='<?php echo $state; ?>'>
@@ -89,6 +91,7 @@
             </div>
 
           <?php
+	      endif;
             endforeach;
           ?>
           <div class='no-members hidden'>
