@@ -8,6 +8,7 @@
       <a style='text-decoration:none;' href='/members-area-page'>members area</a>
     </div>
     <div class='menu-item link-me' data-target='.section-join'>about us</div>
+    <div class='menu-item link-me' data-target='.section-committees'>committees</div>
     <div class='menu-item' >
       <div class='link-me' data-target='.section-awards'>CGA awards</div>&nbsp;/&nbsp;
       <div class='link-me' data-target='.section-rising-star'>Rising Stars</div>
