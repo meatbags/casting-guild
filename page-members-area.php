@@ -47,11 +47,11 @@
   </div>
 </div>
 <style>
-  .section--members-area { min-height:100vh; ?>
+  .section--members-area { min-height:100vh; }
 </style>
 
-  <?php else: ?>
-  
+<?php else: ?>
+
 <!-- LOGGED IN WITHOUT ACCESS -->
 
 <div class='page'>

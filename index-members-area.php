@@ -1,48 +1,33 @@
 <?php
-  $content = apply_filters('the_content', get_the_content());
+  //$content = apply_filters('the_content', get_the_content());
+  $has_access = false;
 
-  // check if user logged in and has access
-  $form = '';
-  $url = 'http://www.castingguild.com.au/members-area-page/';
   if (is_user_logged_in()) {
     $user = wp_get_current_user();
-    $userId = 'user_' . $user->ID;
-    $disable = get_field('disable_members_area_access', $userId);
-    if (!$disabled) {
-      $form = '<a href="' . $url . '">Go To Members Area</a>';
-    } else {
-      $form = 'Your account does not have access to this page.';
-    }
-  } else {
-    $form = '<div class="login-page"><div class="login-page__inner">';
-    $form .= wp_login_form(array('echo'=>false, 'redirect'=>$url));
-    $form .= '<a href="' . wp_lostpassword_url() . '">Password Reset</a>';
-    $form .= '</div></div>';
+    $disabled = get_field('disable_members_area_access', $user->ID);
+    $has_access = $disabled == false;
   }
 
-  // insert form into page string
-  $content = str_replace('[CGA_LOGIN_FORM]', $form, $content);
-  $arr = explode('<p>', $content);  
+  //$arr = explode('<p>', $content);
 ?>
 
 <div class='section'>
   <div class='section-join'>
     <div class='section-join__inner'>
       <?php get_template_part('list-image-title'); ?>
-      <br />
-      <?php
-        foreach ($arr as $p):
-          $pretty = str_replace('</p>', '', $p);
-          if ($pretty != ''): ?>
-          <div class='p'>
-            <div class='content'>
-              <?php echo $pretty; ?>
-            </div>
+      <?php if ($has_access): ?>
+        <a href="<?php echo get_site_url() . '/members-area/'; ?>">Go To Members Area</a>
+      <?php elseif (is_user_logged_in()): ?>
+        Your account does not have access to this page.<br>
+        Please contact the CGA administrators to request access.<br>
+      <?php else: ?>
+        <div class="login-page">
+          <div class="login-page__inner">
+            <?php wp_login_form(array('redirect'=>get_site_url() . '/members-area/')); ?>
+            <a href="' . wp_lostpassword_url() . '">Password Reset</a>
           </div>
-          <?php
-          endif;
-        endforeach;
-      ?>
+        </div>
+      <?php endif; ?>
     </div>
     <div class='parallax parallax-next'>
       <div class='parallax-next__inner'>&darr;</div>

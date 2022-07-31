@@ -5,7 +5,7 @@
     <div class='menu-item link-me' data-target='.section-home'>home</div>
     <div class='menu-item link-me' data-target='.section-members'>members</div>
     <div class='menu-item'>
-      <a style='text-decoration:none;' href='/members-area-page'>members area</a>
+      <a style='text-decoration:none;' href='<?php echo get_site_url(); ?>/members-area/'>members area</a>
     </div>
     <div class='menu-item link-me' data-target='.section-join'>about us</div>
     <div class='menu-item link-me' data-target='.section-committees'>committees</div>
